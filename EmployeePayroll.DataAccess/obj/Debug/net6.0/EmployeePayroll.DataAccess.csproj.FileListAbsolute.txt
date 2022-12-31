@@ -1,0 +1,17 @@
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.DataAccess\bin\Debug\net6.0\EmployeePayroll.DataAccess.deps.json
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.DataAccess\bin\Debug\net6.0\EmployeePayroll.DataAccess.runtimeconfig.json
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.DataAccess\bin\Debug\net6.0\EmployeePayroll.DataAccess.dll
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.DataAccess\bin\Debug\net6.0\EmployeePayroll.DataAccess.pdb
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.DataAccess\bin\Debug\net6.0\EmployeePayroll.Domain.dll
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.DataAccess\bin\Debug\net6.0\EmployeePayroll.Domain.pdb
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.DataAccess\obj\Debug\net6.0\EmployeePayroll.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.DataAccess\obj\Debug\net6.0\EmployeePayroll.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.DataAccess\obj\Debug\net6.0\EmployeePayroll.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.DataAccess\obj\Debug\net6.0\EmployeePayroll.DataAccess.AssemblyInfo.cs
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.DataAccess\obj\Debug\net6.0\EmployeePayroll.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.DataAccess\obj\Debug\net6.0\EmployeePayroll.DataAccess.csproj.CopyComplete
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.DataAccess\obj\Debug\net6.0\EmployeePayroll.DataAccess.dll
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.DataAccess\obj\Debug\net6.0\refint\EmployeePayroll.DataAccess.dll
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.DataAccess\obj\Debug\net6.0\EmployeePayroll.DataAccess.pdb
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.DataAccess\obj\Debug\net6.0\EmployeePayroll.DataAccess.genruntimeconfig.cache
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.DataAccess\obj\Debug\net6.0\ref\EmployeePayroll.DataAccess.dll

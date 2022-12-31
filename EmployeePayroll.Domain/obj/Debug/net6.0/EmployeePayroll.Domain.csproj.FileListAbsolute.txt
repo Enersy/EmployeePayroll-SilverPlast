@@ -1,0 +1,12 @@
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.Domain\bin\Debug\net6.0\EmployeePayroll.Domain.deps.json
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.Domain\bin\Debug\net6.0\EmployeePayroll.Domain.dll
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.Domain\bin\Debug\net6.0\EmployeePayroll.Domain.pdb
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.Domain\obj\Debug\net6.0\EmployeePayroll.Domain.csproj.AssemblyReference.cache
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.Domain\obj\Debug\net6.0\EmployeePayroll.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.Domain\obj\Debug\net6.0\EmployeePayroll.Domain.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.Domain\obj\Debug\net6.0\EmployeePayroll.Domain.AssemblyInfo.cs
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.Domain\obj\Debug\net6.0\EmployeePayroll.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.Domain\obj\Debug\net6.0\EmployeePayroll.Domain.dll
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.Domain\obj\Debug\net6.0\refint\EmployeePayroll.Domain.dll
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.Domain\obj\Debug\net6.0\EmployeePayroll.Domain.pdb
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayroll.Domain\obj\Debug\net6.0\ref\EmployeePayroll.Domain.dll

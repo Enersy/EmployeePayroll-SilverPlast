@@ -1,0 +1,47 @@
+﻿<Window x:Class="EmployeePayrollSystem.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmployeePayrollSystem"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1050" Width="2050">
+ 
+        <DockPanel  LastChildFill="True">
+
+        <StackPanel DockPanel.Dock="Left" Background="Gray" MaxWidth="150" Margin="5">
+                <Expander Margin="5">
+                    <Expander.Header>
+                    <TextBlock>Payroll Management</TextBlock>
+                    </Expander.Header>
+                <StackPanel  DockPanel.Dock="Left">
+                        <TextBlock  Margin="3">Staff</TextBlock>
+                        <TextBlock  Margin="3">Salary</TextBlock>
+                        <TextBlock  Margin="3">Advance Amount</TextBlock>
+                        <TextBlock  Margin="3">Advance Balance Summary</TextBlock>
+                        <TextBlock  Margin="3">Manual Attendance</TextBlock>
+                        <TextBlock  Margin="3">Assign Leave</TextBlock>
+                        <TextBlock  Margin="3">Assign Shift</TextBlock>
+                        <TextBlock  Margin="3">Leave Summary</TextBlock>
+                        <TextBlock  Margin="3">Holidays</TextBlock>
+                    </StackPanel>
+                </Expander>
+                <Expander Margin="5" Header="App Configuration">
+                    <StackPanel>
+                        <TextBlock  Margin="3">Department</TextBlock>
+                        <TextBlock  Margin="3">JobType</TextBlock>
+                        <TextBlock  Margin="3">Designation</TextBlock>
+                        <TextBlock  Margin="3">Shift Settings</TextBlock>
+                        <TextBlock  Margin="3">Attendance Settings</TextBlock>
+                        <TextBlock  Margin="3">Leave type</TextBlock>
+                        <TextBlock  Margin="3">Employee Categpry</TextBlock>
+                    </StackPanel>
+                </Expander>
+            </StackPanel>
+        <StackPanel>
+            
+        </StackPanel>
+        </DockPanel>        
+
+ 
+</Window>
