@@ -6,42 +6,104 @@
         xmlns:local="clr-namespace:EmployeePayrollSystem"
         mc:Ignorable="d"
         Title="MainWindow" Height="1050" Width="2050">
- 
-        <DockPanel  LastChildFill="True">
+    <Grid ShowGridLines="True">
 
-        <StackPanel DockPanel.Dock="Left" Background="Gray" MaxWidth="150" Margin="5">
-                <Expander Margin="5">
-                    <Expander.Header>
-                    <TextBlock>Payroll Management</TextBlock>
-                    </Expander.Header>
-                <StackPanel  DockPanel.Dock="Left">
-                        <TextBlock  Margin="3">Staff</TextBlock>
-                        <TextBlock  Margin="3">Salary</TextBlock>
-                        <TextBlock  Margin="3">Advance Amount</TextBlock>
-                        <TextBlock  Margin="3">Advance Balance Summary</TextBlock>
-                        <TextBlock  Margin="3">Manual Attendance</TextBlock>
-                        <TextBlock  Margin="3">Assign Leave</TextBlock>
-                        <TextBlock  Margin="3">Assign Shift</TextBlock>
-                        <TextBlock  Margin="3">Leave Summary</TextBlock>
-                        <TextBlock  Margin="3">Holidays</TextBlock>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="0.10*" />
+            <RowDefinition Height="0.88*" />
+            <RowDefinition Height="0.02*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.15*" />
+            <ColumnDefinition Width="0.85*"  />
+        </Grid.ColumnDefinitions>
+
+       
+
+            <StackPanel VerticalAlignment="Stretch" Grid.Row="0" Grid.Column="1"  Orientation="Horizontal"  Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" >
+            <TextBlock  >
+                    Silve Plast Payroll Management System thh
+            </TextBlock>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Stretch" Grid.Row="0" Grid.Column="0"  Orientation="Horizontal"  Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" >
+            <Image />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0"   Margin="5"  Orientation="Vertical"  Background="{DynamicResource {x:Static SystemColors.MenuBarBrushKey}}" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+               
+                <Expander Header="Employee Manager" FontSize="20">
+                    <StackPanel>
+                        <TextBlock FontSize="15" Margin="20,0,0,5"> Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
                     </StackPanel>
                 </Expander>
-                <Expander Margin="5" Header="App Configuration">
+                <Expander Header="Attendance Manager" FontSize="20">
                     <StackPanel>
-                        <TextBlock  Margin="3">Department</TextBlock>
-                        <TextBlock  Margin="3">JobType</TextBlock>
-                        <TextBlock  Margin="3">Designation</TextBlock>
-                        <TextBlock  Margin="3">Shift Settings</TextBlock>
-                        <TextBlock  Margin="3">Attendance Settings</TextBlock>
-                        <TextBlock  Margin="3">Leave type</TextBlock>
-                        <TextBlock  Margin="3">Employee Categpry</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5"> Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="Salary Manager" FontSize="20">
+                    <StackPanel>
+                        <TextBlock FontSize="15" Margin="20,0,0,5"> Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="Loan Manager" FontSize="20">
+                    <StackPanel>
+                        <TextBlock FontSize="15" Margin="20,0,0,5"> Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="Admin Manager" FontSize="20">
+                    <StackPanel>
+                        <TextBlock FontSize="15" Margin="20,0,0,5"> Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="Leave Manager" FontSize="20">
+                    <StackPanel>
+                        <TextBlock FontSize="15" Margin="20,0,0,5"> Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="Report Manager" FontSize="20">
+                    <StackPanel>
+                        <TextBlock FontSize="15" Margin="20,0,0,5"> Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                    </StackPanel>
+                </Expander>
+                <Expander Header="Application Settings" FontSize="20">
+                    <StackPanel>
+                        <Button FontSize="15" Content="Department Settings" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickDepartment" />
+                        <Button FontSize="15" Content="Category Settings" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickCategory" />
+                        <Button FontSize="15" Content="Title Settings" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickCategory" />
+                        <Button FontSize="15" Content="Salary Matrix Settings" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickCategory" />
                     </StackPanel>
                 </Expander>
             </StackPanel>
-        <StackPanel>
+           
+            <ContentControl Grid.Row="1" Grid.Column="1" x:Name="Main"   VerticalContentAlignment="Stretch" />
             
-        </StackPanel>
-        </DockPanel>        
+                    
+        
 
- 
+
+
+
+
+    </Grid>
 </Window>

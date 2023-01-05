@@ -15,6 +15,7 @@ namespace EmployeePayroll.Domain.Repository
         IEmpWagerSalaryDetails EmpWagerSalaryDetails { get; }
         ISalaryDetailsRepository SalaryDetails { get; }
         ILoanRepository Loan { get; }
+        IDepartmentRepository Department { get; }
 
         int Save();
        

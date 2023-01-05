@@ -1,4 +1,7 @@
-﻿using System;
+﻿using EmployeePayroll.DataAccess.Implementation;
+using EmployeePayroll.Domain.Repository;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +16,7 @@ namespace EmployeePayrollSystem
     /// </summary>
     public partial class App : Application
     {
+       
+
     }
 }

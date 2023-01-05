@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+using EmployeePayroll.Domain.Repository;
+using EmployeePayrollSystem.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +26,16 @@ namespace EmployeePayrollSystem
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void BtnClickDepartment(object sender, RoutedEventArgs e)
+        {
+            Main.Content =  new ucDepartment();
+        }
+
+        private void BtnClickCategory(object sender, RoutedEventArgs e)
+        {
+            Main.Content =  new ucCategory();
         }
     }
 }

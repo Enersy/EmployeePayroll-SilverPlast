@@ -12,5 +12,6 @@ namespace EmployeePayroll.Domain.Entities
         public string Name { get; set; }
         public string DesignationCode { get; set; }
         public double Basic { get; set; }
+       
     }
 }

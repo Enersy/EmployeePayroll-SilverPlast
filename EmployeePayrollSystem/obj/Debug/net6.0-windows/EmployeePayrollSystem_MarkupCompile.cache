@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\App.xaml
-11407045341
+6-425145869
 
-3-1233169557
-1941905061893
-MainWindow.xaml;
+13-2029412676
+2471232550824
+MainWindow.xaml;Pages\ucCategory.xaml;Pages\ucDepartment.xaml;Pages\ucSalaryMatrix.xaml;Pages\ucTitle.xaml;Styles\Common.xaml;
 
 False
 

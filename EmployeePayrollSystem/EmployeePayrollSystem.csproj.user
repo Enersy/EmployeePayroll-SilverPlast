@@ -7,7 +7,36 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Pages\ucCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ucDepartment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ucSalaryMatrix.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ucTitle.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Styles\Common.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ucCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ucDepartment.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ucSalaryMatrix.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ucTitle.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
