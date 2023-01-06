@@ -3,13 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:vm="clr-namespace:EmployeePayrollSystem.ViewModels"
+             
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="800">
     <UserControl.Resources>
-        <vm:DepartmentViewModel x:Key="vmObj" />
+        
     </UserControl.Resources>
-    <Grid Background="Azure" DataContext="{StaticResource vmObj}">
+    <Grid Background="Azure" >
         <Grid.RowDefinitions >
             <RowDefinition Height="0.10*"/>
             <RowDefinition Height="0.20*"/>
@@ -28,25 +28,50 @@
         <StackPanel Grid.Row="1" Grid.Column="1">
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock>
-                     <Label> Department Name: </Label> <TextBox x:Name="txtDeptName" Text="{Binding DepartmentDTO.Name, Mode=TwoWay}" Width="150" />
+                     <Label> Department Name: </Label> <TextBox x:Name="txtDeptName" Width="150" />
                 </TextBlock>
                 <TextBlock>
-                     <Label> Department Code: </Label> <TextBox x:Name="txtDeptCode" Text="{Binding DepartmentDTO.Code, Mode=TwoWay}" Width="150" />
+                     <Label> Department Code: </Label> <TextBox x:Name="txtDeptCode"  Width="150" />
                 </TextBlock>
                   
             </StackPanel>
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock Margin="0,10,0,0">
-                    <Button  Width="70" HorizontalContentAlignment="Center" Content="Save" Command="{Binding SaveCommand}" />
+                    <Button x:Name="btnSave"  Width="70" HorizontalContentAlignment="Center" Content="Save" Click="Button_Save" />
                 </TextBlock>
                 
             </StackPanel>
         </StackPanel>
-        <StackPanel Grid.Row="2" Grid.Column="1" >
-            <Button x:Name="Edit" Width="150" Content="Edit" Command="{Binding EditCommand, Source={StaticResource vmObj}}" />
-                <Button x:Name="Delete" Width="150" Content="Delete" Command="{Binding DeleteCommand, Source={StaticResource vmObj}}"/>
+        <StackPanel Grid.Row="2" Grid.Column="1" Margin="0,0,10,10" >
 
-            <DataGrid  x:Name="dgDeptDetails" VerticalAlignment="Stretch" Height="200" HorizontalAlignment="Stretch" Margin="30,0,30,40"/>
+            <DataGrid  x:Name="dgDeptDetails" VerticalAlignment="Stretch" Height="200" HorizontalAlignment="Stretch" Margin="30,10,30,40"
+                       xmlns:my ="http://schemas.microsoft.com/wpf/2008/toolkit"
+                       CanUserAddRows="True"
+                       ItemsSource="{Binding}"
+                       AutoGenerateColumns="False">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Department Id" Binding="{Binding Path=Id}"/>
+                    <DataGridTextColumn Header="Department Name" Binding="{Binding Path=Name}"/>
+                    <DataGridTextColumn Header="Department Code" Binding="{Binding Path=Code}"/>
+                    <DataGridTemplateColumn Header="Edit Action"/>
+                   
+                        <!--<DataGridTemplateColumn.CellTemplate >
+                            <DataTemplate>
+                                <Button Click="btnEditDept">Edit</Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>-->
+                    
+
+
+                <!--<DataGridTemplateColumn Header="Delete Action"/>
+                    <DataGridTemplateColumns.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="btnDeleteDept">Delete</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumns.CellTemplate>-->
+                </DataGrid.Columns>
+            </DataGrid>
         </StackPanel>
         
 

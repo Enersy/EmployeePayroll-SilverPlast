@@ -9,12 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeePayroll.Domain", "E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeePayroll.DataAccess", "EmployeePayroll.DataAccess\EmployeePayroll.DataAccess.csproj", "{111137C9-079E-45F7-8F67-D84F08549901}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayrollWindowsForms", "PayrollWindowsForms\PayrollWindowsForms.csproj", "{AA10D501-27EC-4504-BCA0-0CBDF8BBEAAF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll.DataAccess", "Payroll.DataAccess\Payroll.DataAccess.csproj", "{3171F284-3535-45B0-AF68-3D735FD361BF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll.Domain", "Payroll.Domain\Payroll.Domain.csproj", "{B41DF841-A063-438A-A165-74CD5C25FA61}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll.API", "Payroll.API\Payroll.API.csproj", "{240ABAD6-4A63-46B4-8F27-9663D0C13878}"
 EndProject
 Global
@@ -35,18 +29,6 @@ Global
 		{111137C9-079E-45F7-8F67-D84F08549901}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{111137C9-079E-45F7-8F67-D84F08549901}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{111137C9-079E-45F7-8F67-D84F08549901}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AA10D501-27EC-4504-BCA0-0CBDF8BBEAAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AA10D501-27EC-4504-BCA0-0CBDF8BBEAAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AA10D501-27EC-4504-BCA0-0CBDF8BBEAAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AA10D501-27EC-4504-BCA0-0CBDF8BBEAAF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3171F284-3535-45B0-AF68-3D735FD361BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3171F284-3535-45B0-AF68-3D735FD361BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3171F284-3535-45B0-AF68-3D735FD361BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3171F284-3535-45B0-AF68-3D735FD361BF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B41DF841-A063-438A-A165-74CD5C25FA61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B41DF841-A063-438A-A165-74CD5C25FA61}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B41DF841-A063-438A-A165-74CD5C25FA61}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B41DF841-A063-438A-A165-74CD5C25FA61}.Release|Any CPU.Build.0 = Release|Any CPU
 		{240ABAD6-4A63-46B4-8F27-9663D0C13878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{240ABAD6-4A63-46B4-8F27-9663D0C13878}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{240ABAD6-4A63-46B4-8F27-9663D0C13878}.Release|Any CPU.ActiveCfg = Release|Any CPU

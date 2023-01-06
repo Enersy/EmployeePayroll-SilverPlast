@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,6 +25,9 @@ namespace EmployeePayrollSystem
 
         private void ConfigureServices(ServiceCollection services)
         {
+            //services.AddHttpClient("", c=>{
+            //    c.BaseAddress = new Uri();
+            //});
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddSingleton<MainWindow>();
            

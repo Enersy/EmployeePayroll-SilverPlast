@@ -173,4 +173,6 @@ C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\obj\Debu
 C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\obj\Debug\net6.0-windows\App.baml
 C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\obj\Debug\net6.0-windows\MainWindow.baml
-C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\bin\Debug\net6.0-windows\System.Net.Http.Extensions.dll
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\bin\Debug\net6.0-windows\System.Net.Http.Formatting.dll
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\bin\Debug\net6.0-windows\System.Net.Http.Primitives.dll
