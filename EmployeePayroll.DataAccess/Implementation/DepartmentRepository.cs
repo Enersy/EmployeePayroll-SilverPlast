@@ -21,5 +21,16 @@ namespace EmployeePayroll.DataAccess.Implementation
         {
             return _context.Departments;
         }
+
+        public void UpdateDepartment(Department department)
+        {
+             _context.Departments.Update(department);   
+        }
+
+        public async void DeleteDepartment(int Id)
+        {
+           var dept = _context.Departments.Where(x=>x.Id == Id).FirstOrDefault();
+            _context.Departments.Remove(dept);
+        }
     }
 }

@@ -23,8 +23,12 @@ namespace EmployeePayroll.DataAccess.Implementation
 
         public ISalaryDetailsRepository SalaryDetails {get;  }
         public IDepartmentRepository Department {get; }
+        public ICategoryRepository Category { get; }
 
         public ILoanRepository Loan {get; set; }
+
+        
+
         private EmployeePayrollDbContext _context;
         public UnitOfWork(EmployeePayrollDbContext employeePayrollDbContext)
         {
@@ -34,6 +38,7 @@ namespace EmployeePayroll.DataAccess.Implementation
             Designation = new DesignationRepository(_context);
             SalaryDetails = new SalaryDetailsRepository(_context);
             Department = new DepartmentRepository(_context);
+            Category = new CategoryRepository(_context);
             
         }
         public void Dispose()

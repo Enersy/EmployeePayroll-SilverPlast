@@ -10,6 +10,5 @@ namespace EmployeePayroll.Domain.Entities
     {
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;    
-        public string MyProperty { get; set; } = String.Empty;
     }
 }

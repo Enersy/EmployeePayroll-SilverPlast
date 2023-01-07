@@ -10,5 +10,7 @@ namespace EmployeePayroll.Domain.Repository
     public interface IDepartmentRepository:IGenericRepository<Department>
     {
         IEnumerable<Department> GetAllDepartments();
+        void UpdateDepartment(Department department);
+        void DeleteDepartment (int Id);
     }
 }

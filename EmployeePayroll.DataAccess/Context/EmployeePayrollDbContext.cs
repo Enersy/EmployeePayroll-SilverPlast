@@ -24,6 +24,7 @@ namespace EmployeePayroll.DataAccess.Context
         public DbSet<WagersAllowance> WagersAllowances { get; set; }
         public DbSet<SalaryAllowance> SalaryAllowances { get; set; }
         public DbSet<Allowance> Allowances { get; set; }
+        public DbSet<Category> Categories { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

@@ -14,6 +14,7 @@ namespace Payroll.API.Controllers
         public DepartmentController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
+            
         }
         // GET: api/<DepartmentController>
         [HttpGet]
@@ -40,25 +41,21 @@ namespace Payroll.API.Controllers
 
         // PUT api/<DepartmentController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Department department)
+        public async void Put(int id, [FromBody] Department department)
         {
-           var dept = _unitOfWork.Department.Find(x => x.Id == department.Id);
-            if (dept != null) 
-            {
-                _unitOfWork.Department.Update(department);
-            }
-           
+                _unitOfWork.Department.UpdateDepartment(department);
+                _unitOfWork.Save();   
         }
 
         // DELETE api/<DepartmentController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async void Delete(int id)
         {
-            var dept = _unitOfWork.Department.GetById(id );
-            if (dept != null)
-            {
-                _unitOfWork.Department.Delete(id);
-            }
+            
+                _unitOfWork.Department.DeleteDepartment(id);
+            _unitOfWork.Save();
+            
+               
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using EmployeePayroll.DataAccess.Context;
+using EmployeePayroll.DataAccess.Exceptions;
 using EmployeePayroll.Domain.Repository;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -21,8 +22,33 @@ namespace EmployeePayroll.DataAccess.Implementation
         }
         public virtual async Task<bool> Add(T entity)
         {
-            await dbSet.AddAsync(entity);
-            return true;
+            try
+            {
+                if (entity == null)
+                {
+                    throw new ArgumentNullException("entity");
+                }
+                this.dbSet.Add(entity);
+                this._context.SaveChanges();
+                 return true;
+            }
+            catch (DbEntityValidationException dbEx)
+            {
+                var msg = string.Empty;
+
+                //foreach (var validationErrors in dbEx.EntityValidationErrors)
+                //{
+                //    foreach (var validationError in validationErrors)
+                //    {
+                //        msg += string.Format("Property: {0} Error: {1}", validationError.PropertyName, validationError.ErrorMessage) + Environment.NewLine;
+                //    }
+                //}.
+
+                var fail = new Exception(msg, dbEx);
+                throw fail;
+            }
+            //  await dbSet.AddAsync(entity);
+            
         }
 
         public virtual Task<bool> Delete(int id)
@@ -45,9 +71,12 @@ namespace EmployeePayroll.DataAccess.Implementation
             return await dbSet.FindAsync();
         }
 
-        public virtual Task<bool> Update(T entity)
+        public virtual void Update(T entity)
         {
-            throw new NotImplementedException();
+           
+           
+                 throw new NotImplementedException();
+
         }
     }
 }

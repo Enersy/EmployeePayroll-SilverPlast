@@ -12,7 +12,7 @@ namespace EmployeePayroll.Domain.Repository
         Task<IEnumerable<T>> GetAll();
         Task<T> GetById(int id);
         Task<bool> Add(T entity);
-        Task<bool> Update(T entity);
+        void Update(T entity);
         Task<bool> Delete(int id);
         Task<IEnumerable<T>> Find(Expression<Func<T, bool>> predicate);
     }
