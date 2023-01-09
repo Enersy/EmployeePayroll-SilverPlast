@@ -1,6 +1,7 @@
 ﻿
 using EmployeePayroll.Domain.Repository;
 using EmployeePayrollSystem.Pages;
+using EmployeePayrollSystem.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace EmployeePayrollSystem
     /// </summary>
     public partial class MainWindow : Window
     {
+        public IDepartmentService departmentService;
         public MainWindow()
         {
             InitializeComponent();
@@ -36,6 +38,11 @@ namespace EmployeePayrollSystem
         private void BtnClickCategory(object sender, RoutedEventArgs e)
         {
             Main.Content =  new ucCategory();
+        }
+
+        private void BtnClickMatrix(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new ucSalaryMatrix();
         }
     }
 }

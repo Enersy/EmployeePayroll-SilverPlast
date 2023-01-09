@@ -1,19 +1,8 @@
 ﻿using EmployeePayroll.Domain.Entities;
 using EmployeePayrollSystem.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace EmployeePayrollSystem.Pages
 {
@@ -22,10 +11,10 @@ namespace EmployeePayrollSystem.Pages
     /// </summary>
     public partial class ucCategory : UserControl
     {
-        private CategoryService service;
+        private CategoryService _service;
         public ucCategory()
         {
-            service = new CategoryService();
+            _service = new CategoryService();
             InitializeComponent();
             Loaddata();
         }
@@ -34,7 +23,7 @@ namespace EmployeePayrollSystem.Pages
         async void Loaddata()
         {
             dgCategoryDetails.CanUserAddRows = false;
-            dgCategoryDetails.DataContext = await service.GetCat();
+            dgCategoryDetails.DataContext = await _service.GetCats();
         }
         private async void Button_Save(object sender, RoutedEventArgs e)
         {
@@ -48,16 +37,16 @@ namespace EmployeePayrollSystem.Pages
 
             if (cat.Id == 0)
             {
-                await service.SaveCat(cat);
+                 _service.SaveCat(cat);
                 //  MessageBox.Show("Catartment Saved Successfully");
-                dgCategoryDetails.ItemsSource = await service.GetCat();
+                dgCategoryDetails.ItemsSource = await _service.GetCats();
                 dgCategoryDetails.Items.Refresh();
             }
             else
             {
-                await service.UpdateCat(cat);
+                 _service.UpdateCat(cat);
                 // MessageBox.Show("Catartmenr Updated Successfully");
-                dgCategoryDetails.ItemsSource = await service.GetCat();
+                dgCategoryDetails.ItemsSource = await _service.GetCats();
                 dgCategoryDetails.Items.Refresh();
 
             }
@@ -77,10 +66,10 @@ namespace EmployeePayrollSystem.Pages
         private async void btnDeleteCat(object sender, RoutedEventArgs e)
         {
             Category cat = ((FrameworkElement)sender).DataContext as Category;
-            service.DeleteCat(cat.Id);
+            _service.DeleteCat(cat.Id);
 
 
-            dgCategoryDetails.ItemsSource = await service.GetCat();
+            dgCategoryDetails.ItemsSource = await _service.GetCats();
 
             dgCategoryDetails.Items.Refresh();
         }

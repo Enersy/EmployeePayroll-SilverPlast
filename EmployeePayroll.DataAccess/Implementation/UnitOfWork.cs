@@ -26,6 +26,7 @@ namespace EmployeePayroll.DataAccess.Implementation
         public ICategoryRepository Category { get; }
 
         public ILoanRepository Loan {get; set; }
+        public ISalaryMatrixRepository SalaryMatrix {get;}
 
         
 
@@ -39,6 +40,7 @@ namespace EmployeePayroll.DataAccess.Implementation
             SalaryDetails = new SalaryDetailsRepository(_context);
             Department = new DepartmentRepository(_context);
             Category = new CategoryRepository(_context);
+            SalaryMatrix = new SalaryMatrixRepository(_context);
             
         }
         public void Dispose()

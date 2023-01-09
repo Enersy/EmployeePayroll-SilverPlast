@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmployeePayroll.DataAccess.Migrations
 {
     [DbContext(typeof(EmployeePayrollDbContext))]
-    [Migration("20221231011128_Initial migration")]
-    partial class Initialmigration
+    [Migration("20230108155030_Initial Migration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -76,6 +76,23 @@ namespace EmployeePayroll.DataAccess.Migrations
                     b.ToTable("Attendances");
                 });
 
+            modelBuilder.Entity("EmployeePayroll.Domain.Entities.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("EmployeePayroll.Domain.Entities.Department", b =>
                 {
                     b.Property<int>("Id")
@@ -83,6 +100,18 @@ namespace EmployeePayroll.DataAccess.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -231,6 +260,43 @@ namespace EmployeePayroll.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("SalaryAllowances");
+                });
+
+            modelBuilder.Entity("EmployeePayroll.Domain.Entities.SalaryMatrix", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<double>("BigMatRate")
+                        .HasColumnType("float");
+
+                    b.Property<double>("CashAdvance")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Currency")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("DayRate")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Department")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("SmallMatRate")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("salaryMatrices");
                 });
 
             modelBuilder.Entity("EmployeePayroll.Domain.Entities.User", b =>

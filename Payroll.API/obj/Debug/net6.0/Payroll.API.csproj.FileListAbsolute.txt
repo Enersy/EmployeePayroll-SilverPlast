@@ -14,7 +14,6 @@ C:\Users\Admin\source\repos\EmployeePayrollSystem\Payroll.API\obj\Debug\net6.0\P
 C:\Users\Admin\source\repos\EmployeePayrollSystem\Payroll.API\obj\Debug\net6.0\Payroll.API.AssemblyInfoInputs.cache
 C:\Users\Admin\source\repos\EmployeePayrollSystem\Payroll.API\obj\Debug\net6.0\Payroll.API.AssemblyInfo.cs
 C:\Users\Admin\source\repos\EmployeePayrollSystem\Payroll.API\obj\Debug\net6.0\Payroll.API.csproj.CoreCompileInputs.cache
-C:\Users\Admin\source\repos\EmployeePayrollSystem\Payroll.API\obj\Debug\net6.0\Payroll.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Admin\source\repos\EmployeePayrollSystem\Payroll.API\obj\Debug\net6.0\Payroll.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Admin\source\repos\EmployeePayrollSystem\Payroll.API\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\Admin\source\repos\EmployeePayrollSystem\Payroll.API\obj\Debug\net6.0\staticwebassets.development.json
@@ -75,3 +74,4 @@ C:\Users\Admin\source\repos\EmployeePayrollSystem\Payroll.API\bin\Debug\net6.0\r
 C:\Users\Admin\source\repos\EmployeePayrollSystem\Payroll.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\Admin\source\repos\EmployeePayrollSystem\Payroll.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Admin\source\repos\EmployeePayrollSystem\Payroll.API\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Admin\source\repos\EmployeePayrollSystem\Payroll.API\obj\Debug\net6.0\Payroll.API.MvcApplicationPartsAssemblyInfo.cs

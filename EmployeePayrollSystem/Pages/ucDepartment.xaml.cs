@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 using System.Net.Http;
 using Newtonsoft.Json;
 using EmployeePayrollSystem.Services;
+using Microsoft.AspNetCore.Http;
 
 namespace EmployeePayrollSystem.Pages
 {
@@ -32,8 +33,9 @@ namespace EmployeePayrollSystem.Pages
 
         public  ucDepartment()
         {
-            service = new DepartmentService();
-            Catservice = new CategoryService();
+            
+            service = new  DepartmentService();
+            Catservice =new   CategoryService();
             department = new Department();
                 InitializeComponent();
             Loaddata();
@@ -66,7 +68,7 @@ namespace EmployeePayrollSystem.Pages
             }
             else
             {
-                await service.UpdateDepts(dept);
+                 service.UpdateDepts(dept);
                 // MessageBox.Show("Departmenr Updated Successfully");
                   
                 dgDeptDetails.ItemsSource = await service.GetDepts();   
@@ -92,7 +94,7 @@ namespace EmployeePayrollSystem.Pages
                 response.Code = txtDeptCode.Text;   
                 response.Name = txtDeptName.Text;
 
-                await service.UpdateDepts(response);
+                 service.UpdateDepts(response);
             }
            
         }
@@ -123,7 +125,7 @@ namespace EmployeePayrollSystem.Pages
         {
             try
             {
-                var combodata = await Catservice.GetCat();
+                var combodata =await  Catservice.GetCats();
                 if (combodata != null)
                 {
                     foreach (var item in combodata)

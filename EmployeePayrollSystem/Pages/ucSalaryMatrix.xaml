@@ -9,8 +9,8 @@
     <Grid Background="Azure" >
         <Grid.RowDefinitions >
             <RowDefinition Height="0.10*"/>
-            <RowDefinition Height="0.20*"/>
-            <RowDefinition Height="0.70*"/>
+            <RowDefinition Height="0.40*"/>
+            <RowDefinition Height="0.50*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.03*"/>
@@ -26,31 +26,45 @@
             <StackPanel HorizontalAlignment="Center">
                 <WrapPanel >
 
-                    <TextBlock Width="700" HorizontalAlignment="Center">
-                        <Label>Department Name:</Label>
-                    <TextBox x:Name="txtDeptName" Width="150" />
-                    <Label>Department Code:</Label>
-                    <TextBox x:Name="txtDeptCode"  Width="150"/>
-                    </TextBlock>
-                    <TextBlock Width="700">
-                         <Label> Department Category:
+
+                    <TextBlock Height="40" Width="700">
+                         <Label> Category:
                     </Label>
-                    <ComboBox x:Name="cboCategory" Width="150" Initialized="cboCategory_Initialized">
+                    <ComboBox x:Name="cboCategory" Width="150" Initialized="cboCategory_Initialized" >
 
                     </ComboBox>
 
 
-                    <Label>Description:</Label>
-                    <TextBox x:Name="txtDeptDescription"  Width="150"  />
+                    <Label Width="70">Title:</Label>
+                    <ComboBox x:Name="cboDepartment" Width="120" Initialized="cboDepartment_Initialized"></ComboBox>
+                     <Label>Utility Allowance Rate</Label>
+                    <TextBox x:Name="txtUtilityAllowanceRate" Width="120"></TextBox>
                     </TextBlock>
+                    
+                    <TextBlock Height="40" Width="700" HorizontalAlignment="Center" >
+                        <Label>House Allowance:</Label>
+                    <TextBox x:Name="txtHouseAllowanceRate" Width="75" />
+                    <Label>TP Feeding Rate:</Label>
+                    <TextBox x:Name="txtTpFeedingRate"  Width="75"/>
+                        <Label>Night Allowance Rate:</Label>
+                    <TextBox x:Name="txtNightAllowaRate"  Width="75"/>
+                    </TextBlock>
+                    
+                    <TextBlock Height="40">
+                         <Label Content="Small Mat Rate"/>
+                            <TextBox x:Name="txtSmallMatRate" Width="150"/>
+                             <Label Content="Big Mat Rate"/>
+                         <TextBox x:Name="txtBigMatRate" Width="150"/>
+                         <Label Content="Basic Rate"/>
 
-                    <TextBlock HorizontalAlignment="Center" Width="700">
-                     <TextBox HorizontalAlignment="Left" Visibility="Hidden" Text="0" x:Name="txtDeptId"  Width="280" />
-                     
-                    <Button HorizontalAlignment="Center" x:Name="btnSave"  Width="70" HorizontalContentAlignment="Center" Content="Save" Click="Button_Save" />
+
+                    <TextBox x:Name="txtBasicRate" Width="150"/>
 
                     </TextBlock>
+                   
 
+
+                    
 
                 </WrapPanel>
 
@@ -59,10 +73,18 @@
 
 
             </StackPanel>
-        </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1" Margin="0,109,10,10" Grid.RowSpan="2" >
+            <TextBlock Width="700"><InlineUIContainer>
+                            <TextBox HorizontalAlignment="Left" Visibility="Hidden" Text="0" x:Name="txtDeptId"  Width="280" />
+                     
+                        </InlineUIContainer><Run Text=" "/><InlineUIContainer>
+                     
+                            <Button HorizontalAlignment="Center" x:Name="btnSave"  Width="70" HorizontalContentAlignment="Center" Content="Save" Click="Btn_SaveMatrix"  />
 
-            <DataGrid  x:Name="dgDeptDetails" VerticalAlignment="Stretch" Height="200" HorizontalAlignment="Stretch" Margin="30,0,30,40"
+                        </InlineUIContainer></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1" Margin="0,5,10,10" >
+
+            <DataGrid  x:Name="dgDeptDetails" VerticalAlignment="Stretch" Height="100" HorizontalAlignment="Stretch" Margin="30,0,30,40"
                        xmlns:my ="http://schemas.microsoft.com/wpf/2008/toolkit"
                        CanUserAddRows="True"
                        ItemsSource="{Binding}"
@@ -78,7 +100,7 @@
                     <DataGridTemplateColumn>
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Click="btnEditDept">
+                                <Button Click="btnEditMatrix">
                                     Edit
                                 </Button>
                             </DataTemplate>
@@ -88,7 +110,7 @@
                     <DataGridTemplateColumn>
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Click="btnDeleteDept">
+                                <Button Click="btnDeleteMatrix">
                                     Delete
                                 </Button>
                             </DataTemplate>

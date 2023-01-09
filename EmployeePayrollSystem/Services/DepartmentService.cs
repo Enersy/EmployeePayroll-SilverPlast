@@ -10,9 +10,8 @@ using System.Threading.Tasks;
 
 namespace EmployeePayrollSystem.Services
 {
-    public class DepartmentService
+    public class DepartmentService: IDepartmentService
     {
-        private readonly IUnitOfWork _unitOfWork;
         private HttpClient client;
         public DepartmentService()
         {
@@ -33,18 +32,18 @@ namespace EmployeePayrollSystem.Services
         public async Task<Department> GetDept(int Id)
         {
           var response = await client.GetStringAsync("Department/" + Id);
-
-            return JsonConvert.DeserializeObject<Department>(response);
+            var data = JsonConvert.DeserializeObject<Department>(response);
+            return data;
 
         }
 
-        public async Task DeleteDepts(Department department)
+        public async void DeleteDepts(Department department)
         {
             await client.DeleteAsync("Department/" + department.Id);
 
         }
 
-        public async Task UpdateDepts(Department department)
+        public async void UpdateDepts(Department department)
         {
             await client.PutAsJsonAsync("Department/" + department.Id, department);
 

@@ -91,7 +91,7 @@
                         <Button FontSize="15" Content="Department Settings" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickDepartment" />
                         <Button FontSize="15" Content="Category Settings" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickCategory" />
                         <Button FontSize="15" Content="Title Settings" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickCategory" />
-                        <Button FontSize="15" Content="Salary Matrix Settings" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickCategory" />
+                        <Button FontSize="15" Content="Salary Matrix Settings" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickMatrix" />
                     </StackPanel>
                 </Expander>
             </StackPanel>

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+42NClka2dMCk8fBMIzAWixcFoojlKkka8SXIFaKYr2A43nXlr7JBhVAUdt/uLgenmLqRNaGAUzWnDIRoLBN4w==",
+  "dgSpecHash": "XZFCPh6NsarITkxM1JcO/KodPk59nDKH3+AFTEJCIy0rfpWHLZrHAQqfiJu30vr+duFSrEZpm8MRFMVTbyoUZQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\source\\repos\\EmployeePayrollSystem\\EmployeePayrollSystem\\EmployeePayrollSystem.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\messagepack\\2.4.35\\messagepack.2.4.35.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\messagepack.annotations\\2.4.35\\messagepack.annotations.2.4.35.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",

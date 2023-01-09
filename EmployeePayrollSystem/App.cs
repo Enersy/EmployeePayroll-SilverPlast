@@ -1,6 +1,7 @@
 ﻿using EmployeePayroll.DataAccess.Context;
 using EmployeePayroll.DataAccess.Implementation;
 using EmployeePayroll.Domain.Repository;
+using EmployeePayrollSystem.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -29,6 +30,8 @@ namespace EmployeePayrollSystem
             //    c.BaseAddress = new Uri();
             //});
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IDepartmentService, DepartmentService>();
             services.AddSingleton<MainWindow>();
            
         }

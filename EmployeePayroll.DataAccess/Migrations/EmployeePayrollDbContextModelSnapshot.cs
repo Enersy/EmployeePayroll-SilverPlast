@@ -259,6 +259,43 @@ namespace EmployeePayroll.DataAccess.Migrations
                     b.ToTable("SalaryAllowances");
                 });
 
+            modelBuilder.Entity("EmployeePayroll.Domain.Entities.SalaryMatrix", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<double>("BigMatRate")
+                        .HasColumnType("float");
+
+                    b.Property<double>("CashAdvance")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Currency")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("DayRate")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Department")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("SmallMatRate")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("salaryMatrices");
+                });
+
             modelBuilder.Entity("EmployeePayroll.Domain.Entities.User", b =>
                 {
                     b.Property<int>("Id")

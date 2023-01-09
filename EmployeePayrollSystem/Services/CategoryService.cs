@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace EmployeePayrollSystem.Services
 {
-    public class CategoryService
+    public class CategoryService:ICategoryService
     {
         private HttpClient client;
         public CategoryService()
@@ -23,28 +23,30 @@ namespace EmployeePayrollSystem.Services
                 );
         }
 
-        public async Task SaveCat(Category Category)
+        public async void SaveCat(Category Category)
         {
             await client.PostAsJsonAsync("Category", Category);
         }
 
-        public async Task DeleteCat(int Id)
+        public async void DeleteCat(int Id)
         {
             await client.DeleteAsync("Category/" + Id);
 
         }
 
-        public async Task UpdateCat(Category Category)
+        public async void UpdateCat(Category Category)
         {
             await client.PutAsJsonAsync("Category/" + Category.Id, Category);
 
         }
 
-        public async Task<IEnumerable<Category>> GetCat()
+        public async Task<IEnumerable<Category>> GetCats()
         {
             var response = await client.GetStringAsync("Category");
             return JsonConvert.DeserializeObject<IEnumerable<Category>>(response).ToList();
 
         }
+
+        
     }
 }
