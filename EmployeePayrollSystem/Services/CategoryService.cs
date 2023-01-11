@@ -47,6 +47,11 @@ namespace EmployeePayrollSystem.Services
 
         }
 
-        
+        public async Task<Category> GetCategory(int id)
+        {
+            var response = await client.GetStringAsync("Catwgory/"+ id);
+
+            return JsonConvert.DeserializeObject<Category>(response);
+        }
     }
 }

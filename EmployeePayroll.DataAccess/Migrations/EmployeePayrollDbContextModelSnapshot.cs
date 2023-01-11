@@ -288,7 +288,19 @@ namespace EmployeePayroll.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("HouseAllowanceRate")
+                        .HasColumnType("float");
+
+                    b.Property<double>("NightAllowanceRate")
+                        .HasColumnType("float");
+
                     b.Property<double>("SmallMatRate")
+                        .HasColumnType("float");
+
+                    b.Property<double>("TPFeedingAllowanceRate")
+                        .HasColumnType("float");
+
+                    b.Property<double>("UtilityAllowanceRate")
                         .HasColumnType("float");
 
                     b.HasKey("Id");

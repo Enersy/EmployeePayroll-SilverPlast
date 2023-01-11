@@ -10,7 +10,7 @@ namespace EmployeePayrollSystem.Services
     public interface ICategoryService
     {
         //Task<Category> GetCat();
-        //Task<Category> GetCategory(int id);
+        Task<Category> GetCategory(int id);
         void DeleteCat(int Id);
         void UpdateCat(Category Category);
         Task<IEnumerable<Category>> GetCats();

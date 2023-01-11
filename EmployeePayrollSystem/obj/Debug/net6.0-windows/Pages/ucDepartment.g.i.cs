@@ -108,7 +108,7 @@ namespace EmployeePayrollSystem.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/EmployeePayrollSystem;component/pages/ucdepartment.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/EmployeePayrollSystem;V1.0.0.0;component/pages/ucdepartment.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Pages\ucDepartment.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

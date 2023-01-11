@@ -13,5 +13,6 @@ namespace EmployeePayrollSystem.Services
         Task<Department> GetDept(int v);
         void UpdateDepts(Department response);
         void DeleteDepts(Department dept);
+        void SaveDepts(Department response);
     }
 }

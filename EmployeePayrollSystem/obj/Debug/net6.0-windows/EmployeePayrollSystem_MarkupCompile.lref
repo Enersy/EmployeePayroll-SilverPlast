@@ -1,7 +1,6 @@
 ﻿
 FC:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\App.xaml;;
-FC:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\MainWindow.xaml;;
-FC:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\Pages\ucCategory.xaml;;
-FC:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\Pages\ucSalaryMatrix.xaml;;
-FC:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\Pages\ucTitle.xaml;;
+FC:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\View\MainWindow.xaml;;
+FC:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\View\ucCategory.xaml;;
+FC:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\View\ucSalaryMatrix.xaml;;
 

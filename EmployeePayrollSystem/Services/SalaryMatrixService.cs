@@ -34,7 +34,7 @@ namespace EmployeePayrollSystem.Services
 
         public async void SaveSalaryMax(SalaryMatrix salaryMax)
         {
-            await client.PostAsJsonAsync("SalaryMatrixy", salaryMax);
+            await client.PostAsJsonAsync("SalaryMatrix", salaryMax);
         }
 
         public async void UpdateSalaryMax(SalaryMatrix salaryMax)

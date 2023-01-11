@@ -15,6 +15,11 @@ namespace EmployeePayroll.Domain.Entities
         public double CashAdvance { get; set; }
         public double SmallMatRate { get; set; }
         public double BigMatRate { get; set; }
+        public double HouseAllowanceRate { get; set; }
+        public double TPFeedingAllowanceRate { get; set; }
+        public double NightAllowanceRate { get; set; }
+        public double UtilityAllowanceRate { get; set; }
+
         public string Currency { get; set; } = string.Empty;
 
     }

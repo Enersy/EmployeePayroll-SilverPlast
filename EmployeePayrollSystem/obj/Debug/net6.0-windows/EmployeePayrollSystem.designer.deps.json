@@ -40,6 +40,14 @@
           }
         }
       },
+      "CommunityToolkit.Mvvm/8.0.0": {
+        "runtime": {
+          "lib/net6.0/CommunityToolkit.Mvvm.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.1"
+          }
+        }
+      },
       "MessagePack/2.4.35": {
         "dependencies": {
           "MessagePack.Annotations": "2.4.35",
@@ -1405,6 +1413,13 @@
       "sha512": "sha512-EycyMsb6rD2PK9P0SyibFfEhvWWttdrYhyPF4f41uzdB/44yQlV+2Wehxyg489Rj6gbPvSPgbKq0xsHJBhipZA==",
       "path": "azure.identity/1.6.0",
       "hashPath": "azure.identity.1.6.0.nupkg.sha512"
+    },
+    "CommunityToolkit.Mvvm/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Jiu2g5WUdXRwzhJkHB+B4JBKP5A5+fp8xKiW/ZQo5PI+DruI7MbPEcK9K/Aw0YzTiWRuG6CBluzYIWN5Eo7BkQ==",
+      "path": "communitytoolkit.mvvm/8.0.0",
+      "hashPath": "communitytoolkit.mvvm.8.0.0.nupkg.sha512"
     },
     "MessagePack/2.4.35": {
       "type": "package",
