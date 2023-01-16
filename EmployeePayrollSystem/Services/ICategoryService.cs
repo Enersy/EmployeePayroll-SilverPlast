@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,10 +12,10 @@ namespace EmployeePayrollSystem.Services
     {
         //Task<Category> GetCat();
         Task<Category> GetCategory(int id);
-        void DeleteCat(int Id);
-        void UpdateCat(Category Category);
         Task<IEnumerable<Category>> GetCats();
-        void SaveCat(Category Category);
+        Task<HttpResponseMessage> DeleteCat(int Id);
+        Task<HttpResponseMessage> UpdateCat(Category Category);
+        Task<HttpResponseMessage> SaveCat(Category Category);
 
     }
 }

@@ -20,7 +20,7 @@ namespace Payroll.API.Controllers
         [HttpGet]
         public async Task<IEnumerable<Category>> Get()
         {
-            return _unitOfWork.Category.GetAllCategories();
+            return await _unitOfWork.Category.GetAllCategories();
         }
 
         // GET api/<CategoryController>/5
@@ -32,26 +32,26 @@ namespace Payroll.API.Controllers
 
         // POST api/<CategoryController>
         [HttpPost]
-        public void Post([FromBody]Category category)
+        public async Task Post([FromBody]Category category)
         {
-            _unitOfWork.Category.Add(category);
+           await _unitOfWork.Category.Add(category);
             _unitOfWork.Save();
 
         }
 
         // PUT api/<CategoryController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]Category Category)
+        public async Task Put(int id, [FromBody]Category Category)
         {
-            _unitOfWork.Category.UpdateCategory(Category);
+           await _unitOfWork.Category.UpdateCategory(Category);
             _unitOfWork.Save();
         }
 
         // DELETE api/<CategoryController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
-            _unitOfWork.Category.DeleteCategory(id);
+           await _unitOfWork.Category.DeleteCategory(id);
             _unitOfWork.Save();
         }
     }

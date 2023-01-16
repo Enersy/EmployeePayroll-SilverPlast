@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="EmployeePayrollSystem.View.ucEmployeeManager"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EmployeePayrollSystem.View"
+             xmlns:viewmodels="clr-namespace:EmployeePayrollSystem.ViewModels"
+             d:DataContext="{d:DesignInstance Type=viewmodels:EmployeeViewModel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="Azure">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.10*"/>
+            <RowDefinition Height="0.30*"/>
+            <RowDefinition Height="0.60*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.03*"/>
+            <ColumnDefinition Width="0.97*"/>
+
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <Label Content="EMPLOYEE MANAGER" HorizontalAlignment="Center" FontSize="24"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" >
+            <TextBlock Height="40" HorizontalAlignment="Center">
+                 <Label>Select Department</Label>
+                <ComboBox x:Name="cboDepartment" Width="150" Initialized="cboDepartment_Initialized" Text="{Binding EmpTitle}" />
+                <Label Content="Enter Staff Code :"/> 
+                <TextBox x:Name="txtSearchByEmpCode" Width="120" Text="{Binding EmpCode}"/>
+                <Button x:Name="btnGetEmployee" Content="Get Staff" Width="70" Command="{Binding SearchEmployeeCommand, Mode=OneWay}"/>
+            </TextBlock>
+            <DataGrid Height="90" Margin="0,0,20,0" 
+                xmlns:my ="http://schemas.microsoft.com/wpf/2008/toolkit"
+                CanUserAddRows="False"
+                ItemsSource="{Binding QuerryResultList}"
+                AutoGenerateColumns="False">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Visibility="Hidden" Header="Category Id" Binding="{Binding Path=Id}"/>
+                    <DataGridTextColumn Header=" Staff Code" Binding="{Binding Path=empCode}"/>
+                    <DataGridTextColumn Header="First Name" Binding="{Binding Path=empFirstName}"/>
+                    <DataGridTextColumn Header="Last Name" Binding="{Binding Path=Address}"/>
+                    
+                    <DataGridTemplateColumn Header="Edit Action"/>
+
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Click="btnEditEmployee" >
+                                    Edit
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+
+                    <DataGridTemplateColumn Header="Delete Action"/>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Click="btnDeleteEmployee" >
+                                    Delete
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+
+            </DataGrid>
+        </StackPanel>
+        <local:ucEmployee Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Width="776" Height="270"/>
+
+
+    </Grid>
+</UserControl>

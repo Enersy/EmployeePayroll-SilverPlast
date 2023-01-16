@@ -24,7 +24,7 @@ namespace EmployeePayrollSystem.Services
 
         }
 
-        public async Task SaveDept(Department department)
+        public async void SaveDepts(Department department)
         {
             await client.PostAsJsonAsync("Department", department);
         }
@@ -37,9 +37,9 @@ namespace EmployeePayrollSystem.Services
 
         }
 
-        public async void DeleteDepts(Department department)
+        public async void DeleteDepts(int Id)
         {
-            await client.DeleteAsync("Department/" + department.Id);
+            await client.DeleteAsync("Department/" + Id);
 
         }
 

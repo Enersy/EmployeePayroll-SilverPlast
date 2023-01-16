@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace EmployeePayrollSystem.ViewModels
 {
@@ -15,7 +16,7 @@ namespace EmployeePayrollSystem.ViewModels
     public partial class CategoryViewModel 
     {
         [ObservableProperty]
-        private string? catName;
+        private string catName;
 
         [ObservableProperty]
         private ObservableCollection<Category> catList;
@@ -23,54 +24,68 @@ namespace EmployeePayrollSystem.ViewModels
         [ObservableProperty]
         private int id;
 
-        private Category cat;
-       
-
-
+        
         private readonly ICategoryService _service;
         public CategoryViewModel()
         {
-            cat = new Category()
-            {
-                Id =Convert.ToInt32( id),
-                Name = catName,
-            };
             _service = new CategoryService();
-
             loadData();
-          
         }
+
        
-
         [RelayCommand]
-        private void SaveCategories ()
+        private async void SaveCategories ()
         {
+            Category cat = new Category();
+            cat.Name = catName;
+            cat.Id = id;
 
-
-            if (cat.Id == 0)
+            try
             {
-                _service.SaveCat(cat);
+                if (cat.Id == 0)
 
-                //  MessageBox.Show("Catartment Saved Successfully");
-                loadData();
+                {
+                    var response = await _service.SaveCat(cat);
+
+                    //  MessageBox.Show("Catartment Saved Successfully");
+                    if (response.IsSuccessStatusCode)
+                    {
+                        CatList.Add(cat);
+                    }
+
+                }
+                else
+                {
+                    var response = await _service.UpdateCat(cat);
+                    if (response.IsSuccessStatusCode)
+                    {
+                       
+                       loadData();
+                    }
+
+                    // MessageBox.Show("Catartmenr Updated Successfully");
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Save Operation");
+            }
+    
                 ClearField();
-                //  dgCategoryDetails.Items.Refresh();
-            }
-            else
-            {
-                 _service.UpdateCat(cat);
-                // MessageBox.Show("Catartmenr Updated Successfully");
-
-
-            }
 
         }
 
         
         public async void DeleteCategory(int Id) 
         {
-            _service.DeleteCat(Id);
-            loadData();
+           var response = await _service.DeleteCat(Id);
+            if (response.IsSuccessStatusCode)
+            {
+                loadData();
+            }
+           
         }
 
         [RelayCommand]
@@ -85,15 +100,11 @@ namespace EmployeePayrollSystem.ViewModels
             
         }
 
-
         void ClearField() 
         {
             this.id = 0;
             this.CatName = String.Empty;
         }
-
-
-
 
         public  async void loadData()
         {

@@ -17,19 +17,19 @@ namespace EmployeePayroll.DataAccess.Implementation
             _context = context;
         }
 
-        public void DeleteCategory(int Id)
+        public async Task DeleteCategory(int Id)
         {
-            var Cat = _context.Categories.Where(x => x.Id == Id).FirstOrDefault();
+            var Cat =  _context.Categories.Where(x => x.Id == Id).FirstOrDefault();
             _context.Categories.Remove(Cat);
         }
 
-        public IEnumerable<Category> GetAllCategories()
+        public async Task<IEnumerable<Category>> GetAllCategories()
         {
-            return _context.Categories;
+            return  _context.Categories;
         }
 
 
-        public void UpdateCategory(Category category)
+        public async Task UpdateCategory(Category category)
         {
             _context.Categories.Update(category);
         }

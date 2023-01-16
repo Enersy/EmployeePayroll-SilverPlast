@@ -39,6 +39,7 @@ namespace EmployeePayrollSystem.ViewModels
         {
             _service = new DepartmentService();
             _department = new Department();
+            loadData();
 
         }
 
@@ -77,10 +78,10 @@ namespace EmployeePayrollSystem.ViewModels
             Description = String.Empty;
         }
 
-        private async void loadData()
+        public async void loadData()
         {
-           var depts =  _service.GetDepts().Result;
-           deptlist = new  ObservableCollection<Department>(depts);
+           var depts = await  _service.GetDepts();
+           Deptlist = new  ObservableCollection<Department>(depts);
         }
     }
 }

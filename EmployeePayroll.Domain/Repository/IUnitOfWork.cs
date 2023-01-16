@@ -18,6 +18,7 @@ namespace EmployeePayroll.Domain.Repository
         IDepartmentRepository Department { get; }
         ICategoryRepository Category { get; }
         ISalaryMatrixRepository SalaryMatrix { get; }
+        IEmployeeRepository Employee { get; }
 
         int Save();
        

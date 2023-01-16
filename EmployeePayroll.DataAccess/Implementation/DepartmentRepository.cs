@@ -12,17 +12,17 @@ namespace EmployeePayroll.DataAccess.Implementation
             _context = context;
         }
 
-        public  IEnumerable<Department> GetAllDepartments()
+        public async  Task<IEnumerable<Department>> GetAllDepartments()
         {
             return _context.Departments;
         }
 
-        public void UpdateDepartment(Department department)
+        public async Task UpdateDepartment(Department department)
         {
              _context.Departments.Update(department);   
         }
 
-        public async void DeleteDepartment(int Id)
+        public async Task DeleteDepartment(int Id)
         {
            var dept = _context.Departments.Where(x=>x.Id == Id).FirstOrDefault();
             _context.Departments.Remove(dept);

@@ -20,7 +20,7 @@ namespace Payroll.API.Controllers
         [HttpGet]
         public async Task<IEnumerable<SalaryMatrix>> Get()
         {
-            return _unitOfWork.SalaryMatrix.GetAllSalaryMatrix();
+            return await _unitOfWork.SalaryMatrix.GetAllSalaryMatrix();
         }
 
         // GET api/<SalaryMatrixController>/5
@@ -32,25 +32,25 @@ namespace Payroll.API.Controllers
 
         // POST api/<SalaryMatrixController>
         [HttpPost]
-        public void Post([FromBody] SalaryMatrix salaryMatrix)
+        public async Task Post([FromBody] SalaryMatrix salaryMatrix)
         {
-            _unitOfWork.SalaryMatrix.Add(salaryMatrix);
+           await _unitOfWork.SalaryMatrix.Add(salaryMatrix);
             _unitOfWork.Save();
         }
 
         // PUT api/<SalaryMatrixController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] SalaryMatrix salaryMatrix)
+        public async Task Put(int id, [FromBody] SalaryMatrix salaryMatrix)
         {
-            _unitOfWork.SalaryMatrix.UpdateSalaryMatrix(salaryMatrix);
+           await _unitOfWork.SalaryMatrix.UpdateSalaryMatrix(salaryMatrix);
             _unitOfWork.Save();
         }
 
         // DELETE api/<SalaryMatrixController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
-            _unitOfWork.SalaryMatrix.DeleteSalaryMatrix(id);
+           await _unitOfWork.SalaryMatrix.DeleteSalaryMatrix(id);
             _unitOfWork.Save();
         }
     }

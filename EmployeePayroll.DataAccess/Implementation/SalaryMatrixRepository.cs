@@ -12,17 +12,17 @@ namespace EmployeePayroll.DataAccess.Implementation
         {
             _context = context;
         }
-        public IEnumerable<SalaryMatrix> GetAllSalaryMatrix()
+        public async Task<IEnumerable<SalaryMatrix>> GetAllSalaryMatrix()
         {
             return _context.salaryMatrices;
         }
 
-        public void UpdateSalaryMatrix(SalaryMatrix matrix)
+        public async Task UpdateSalaryMatrix(SalaryMatrix matrix)
         {
             _context.salaryMatrices.Update(matrix);
         }
 
-        public async void DeleteSalaryMatrix(int Id)
+        public async Task DeleteSalaryMatrix(int Id)
         {
             var dept = _context.salaryMatrices.Where(x => x.Id == Id).FirstOrDefault();
             _context.salaryMatrices.Remove(dept);

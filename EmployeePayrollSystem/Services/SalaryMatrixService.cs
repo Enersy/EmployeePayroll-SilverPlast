@@ -21,9 +21,16 @@ namespace EmployeePayrollSystem.Services
                 new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("appliSalaryMaxion/json")
                 );
         }
-        public async void DeleteSalaryMax(int Id)
+        public async Task<HttpResponseMessage> DeleteSalaryMax(int Id)
         {
-            await client.DeleteAsync("SalaryMatrix/" + Id);
+           var response = await client.DeleteAsync("SalaryMatrix/" + Id);
+            return response;
+        }
+
+        public async Task<SalaryMatrix> GetSalaryMax(int id)
+        {
+            var response = await client.GetStringAsync("SalaryMatrix/"+ id);
+            return JsonConvert.DeserializeObject<SalaryMatrix>(response);
         }
 
         public async Task<IEnumerable<SalaryMatrix>> GetSalaryMaxs()
@@ -32,14 +39,16 @@ namespace EmployeePayrollSystem.Services
             return JsonConvert.DeserializeObject<IEnumerable<SalaryMatrix>>(response).ToList();
         }
 
-        public async void SaveSalaryMax(SalaryMatrix salaryMax)
+        public async Task<HttpResponseMessage> SaveSalaryMax(SalaryMatrix salaryMax)
         {
-            await client.PostAsJsonAsync("SalaryMatrix", salaryMax);
+           var response = await client.PostAsJsonAsync("SalaryMatrix", salaryMax);
+            return response;
         }
 
-        public async void UpdateSalaryMax(SalaryMatrix salaryMax)
+        public async Task<HttpResponseMessage> UpdateSalaryMax(SalaryMatrix salaryMax)
         {
-            await client.PutAsJsonAsync("SalaryMatrix/" + salaryMax.Id, salaryMax);
+           var response = await client.PutAsJsonAsync("SalaryMatrix/" + salaryMax.Id, salaryMax);
+            return response;
         }
     }
 }

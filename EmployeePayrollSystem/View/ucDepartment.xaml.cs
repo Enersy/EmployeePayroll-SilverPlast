@@ -27,54 +27,39 @@ namespace EmployeePayrollSystem.View
     /// </summary>
     public partial class ucDepartment : UserControl
     {
-        protected Department department;
-        public DepartmentService service;
+       
+       
         public DepartmentViewModel ViewModel;
-       private CategoryService categoryService; 
+       private ICategoryService categoryService;
+        
 
 
         public  ucDepartment()
         {
-            
-            service = new  DepartmentService();
-            ViewModel =new   DepartmentViewModel();
-            department = new Department();
+            ViewModel = new   DepartmentViewModel();
+            DataContext = ViewModel;
              categoryService = new CategoryService();
-                InitializeComponent();
-        
+             InitializeComponent();
+            dgDeptDetails.ItemsSource = ViewModel.Deptlist;
+           // ViewModel.loadData();
         }
         
 
-
-        private async void Button_Update(object sender, RoutedEventArgs e)
-        {
-            var response = await service.GetDept(Convert.ToInt32(txtDeptId.Text));
-            if (response != null) 
-            {
-                response.Code = txtDeptCode.Text;   
-                response.Name = txtDeptName.Text;
-
-                 service.UpdateDepts(response);
-            }
-           
-        }
-       
-       
-
-       void btnEditDept(object sender, RoutedEventArgs e) 
+        void btnEditDept(object sender, RoutedEventArgs e) 
         {
             Department dept =((FrameworkElement)sender).DataContext as Department;
-            txtDeptId.Text = dept.Id.ToString();
-            txtDeptCode.Text = dept.Code;
-            txtDeptName.Text =dept.Name;
-            txtDeptDescription.Text = dept.Description;
-            cboCategory.Text=dept.Category;
+            ViewModel.code = dept.Code;
+            ViewModel.name = dept.Name;
+            ViewModel.description = dept.Description;
+            ViewModel.category = dept.Category;
+            
+           
 
         }
         async void btnDeleteDept(object sender, RoutedEventArgs e)
         {
             Department dept = ((FrameworkElement)sender).DataContext as Department;
-            service.DeleteDepts(dept);
+            //service.DeleteDepts(dept);
 
             dgDeptDetails.ItemsSource = ViewModel.Deptlist;
             dgDeptDetails.Items.Refresh();
@@ -85,7 +70,7 @@ namespace EmployeePayrollSystem.View
         {
             try
             {
-                var combodata =await  Catserv.GetCats();
+                var combodata = await categoryService.GetCats();
                 if (combodata != null)
                 {
                     foreach (var item in combodata)

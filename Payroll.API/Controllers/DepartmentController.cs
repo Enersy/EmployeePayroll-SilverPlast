@@ -20,7 +20,7 @@ namespace Payroll.API.Controllers
         [HttpGet]
         public async Task<IEnumerable<Department>> Get()
         {
-            return _unitOfWork.Department.GetAllDepartments();
+            return await _unitOfWork.Department.GetAllDepartments();
         }
 
         // GET api/<DepartmentController>/5
@@ -32,29 +32,27 @@ namespace Payroll.API.Controllers
 
         // POST api/<DepartmentController>
         [HttpPost]
-        public void Post([FromBody] Department department)
+        public async Task Post([FromBody] Department department)
         {
-            _unitOfWork.Department.Add(department);
+           await _unitOfWork.Department.Add(department);
             _unitOfWork.Save();
             
         }
 
         // PUT api/<DepartmentController>/5
         [HttpPut("{id}")]
-        public async void Put(int id, [FromBody] Department department)
+        public async Task Put(int id, [FromBody] Department department)
         {
-                _unitOfWork.Department.UpdateDepartment(department);
+              await  _unitOfWork.Department.UpdateDepartment(department);
                 _unitOfWork.Save();   
         }
 
         // DELETE api/<DepartmentController>/5
         [HttpDelete("{id}")]
-        public async void Delete(int id)
+        public async Task Delete(int id)
         {
-            
-                _unitOfWork.Department.DeleteDepartment(id);
-            _unitOfWork.Save();
-            
+              await  _unitOfWork.Department.DeleteDepartment(id);
+            _unitOfWork.Save();  
                
         }
     }

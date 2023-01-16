@@ -12,7 +12,7 @@ namespace EmployeePayrollSystem.Services
         Task<IEnumerable<Department>> GetDepts();
         Task<Department> GetDept(int v);
         void UpdateDepts(Department response);
-        void DeleteDepts(Department dept);
+        void DeleteDepts(int id);
         void SaveDepts(Department response);
     }
 }

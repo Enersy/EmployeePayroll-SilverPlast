@@ -119,6 +119,61 @@ namespace EmployeePayroll.DataAccess.Migrations
                     b.ToTable("Departments");
                 });
 
+            modelBuilder.Entity("EmployeePayroll.Domain.Entities.Employee", b =>
+                {
+                    b.Property<int>("empId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("empId"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("empCategory")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("empCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("empDob")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("empFirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("empJob")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("empLastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("empTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("nextOfKin")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("passport")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("phoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("empId");
+
+                    b.ToTable("Employees");
+                });
+
             modelBuilder.Entity("EmployeePayroll.Domain.Entities.Grade", b =>
                 {
                     b.Property<int>("gradeId")

@@ -35,8 +35,8 @@ namespace EmployeePayrollSystem.View
         private void btnEditCat(object sender, RoutedEventArgs e)
         {
             Category cat = ((FrameworkElement)sender).DataContext as Category;
-            txtCatId.Text = cat.Id.ToString();
-            txtCatName.Text = cat.Name;
+            _categoryViewModel.Id = cat.Id;
+          
         }
 
         private void btnDeleteCat(object sender, RoutedEventArgs e)

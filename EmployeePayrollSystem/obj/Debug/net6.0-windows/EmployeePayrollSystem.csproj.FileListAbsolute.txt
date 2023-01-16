@@ -177,3 +177,10 @@ C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\obj\Debu
 C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\obj\Debug\net6.0-windows\View\ucCategory.baml
 C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\obj\Debug\net6.0-windows\View\ucSalaryMatrix.baml
 C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\bin\Debug\net6.0-windows\CommunityToolkit.Mvvm.dll
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\obj\Debug\net6.0-windows\View\ucEmployee.g.cs
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\obj\Debug\net6.0-windows\View\ucEmployee.baml
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\obj\Debug\net6.0-windows\View\ucEmployeeManager.g.cs
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\obj\Debug\net6.0-windows\View\ucEmployeeManager.baml
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\obj\Debug\net6.0-windows\View\ucRegisterEmployee.g.cs
+C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\obj\Debug\net6.0-windows\View\ucRegisterEmployee.baml

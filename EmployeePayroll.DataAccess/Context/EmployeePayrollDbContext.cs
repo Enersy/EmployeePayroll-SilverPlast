@@ -26,6 +26,7 @@ namespace EmployeePayroll.DataAccess.Context
         public DbSet<Allowance> Allowances { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<SalaryMatrix> salaryMatrices { get; set; }
+        public DbSet<Employee> Employees { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

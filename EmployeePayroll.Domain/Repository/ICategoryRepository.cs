@@ -9,8 +9,8 @@ namespace EmployeePayroll.Domain.Repository
 {
     public interface ICategoryRepository : IGenericRepository<Category>
     {
-        IEnumerable<Category> GetAllCategories();
-        void UpdateCategory(Category department);
-        void DeleteCategory(int Id);
+        Task<IEnumerable<Category>> GetAllCategories();
+        Task UpdateCategory(Category department);
+        Task DeleteCategory(int Id);
     }
 }

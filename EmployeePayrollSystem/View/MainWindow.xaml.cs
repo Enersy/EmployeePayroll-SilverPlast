@@ -41,6 +41,30 @@ namespace EmployeePayrollSystem.View
         {
             Dashboard.Content = new ucSalaryMatrix();
         }
-        
+
+        private void BtnClickEmpManager(object sender, RoutedEventArgs e)
+        {
+            Dashboard.Content = new ucEmployeeManager();
+        }
+
+        private void BtnClickEmpRegistration(object sender, RoutedEventArgs e)
+        {
+            Dashboard.Content = new ucRegisterEmployee();
+        }
+
+        private void BtnClickLoanApplication(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnClickEmpLoanManager(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnClickEmpAttendance(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

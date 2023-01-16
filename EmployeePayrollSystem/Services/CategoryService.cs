@@ -23,20 +23,23 @@ namespace EmployeePayrollSystem.Services
                 );
         }
 
-        public async void SaveCat(Category Category)
+        public async Task<HttpResponseMessage> SaveCat(Category Category)
         {
-            await client.PostAsJsonAsync("Category", Category);
+           var response = await client.PostAsJsonAsync("Category", Category);
+            return response;
         }
 
-        public async void DeleteCat(int Id)
+        public async Task<HttpResponseMessage> DeleteCat(int Id)
         {
-            await client.DeleteAsync("Category/" + Id);
+           var response = await client.DeleteAsync("Category/" + Id);
+            return response;
 
         }
 
-        public async void UpdateCat(Category Category)
+        public async Task<HttpResponseMessage> UpdateCat(Category Category)
         {
-            await client.PutAsJsonAsync("Category/" + Category.Id, Category);
+           var response = await client.PutAsJsonAsync("Category/" + Category.Id, Category);
+            return response;
 
         }
 
