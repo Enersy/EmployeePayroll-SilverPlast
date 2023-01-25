@@ -19,6 +19,6 @@
 
         </Grid.ColumnDefinitions>
         <TextBlock HorizontalAlignment="Center" FontSize="24">Employee Registration</TextBlock>
-        <local:ucEmployee Height="350"  VerticalAlignment="Center" Grid.Row="2" />
+        <local:ucEmployee Height="350"  VerticalAlignment="Top" Grid.Row="2" />
     </Grid>
 </UserControl>

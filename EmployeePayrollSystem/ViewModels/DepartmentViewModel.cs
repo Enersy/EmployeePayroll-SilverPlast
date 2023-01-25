@@ -14,6 +14,7 @@ namespace EmployeePayrollSystem.ViewModels
     [ObservableObject]
     public partial class DepartmentViewModel
     {
+        
         [ObservableProperty]
         public string name;
         [ObservableProperty]

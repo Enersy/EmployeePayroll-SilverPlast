@@ -64,7 +64,7 @@ namespace EmployeePayrollSystem.View
 
         private void BtnClickEmpAttendance(object sender, RoutedEventArgs e)
         {
-
+            Dashboard.Content = new ucEmployeeAttendance();
         }
     }
 }

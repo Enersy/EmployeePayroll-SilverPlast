@@ -17,36 +17,45 @@ namespace EmployeePayroll.DataAccess.Implementation
             {
             }
 
-            public override async Task<IEnumerable<Attendance>> GetAll()
+          
+        public async Task<IEnumerable<Attendance>> GetAllAttendance()
+        {
+            try
             {
-                try
-                {
-                    return await dbSet.ToListAsync();
-                }
-                catch (Exception)
-                {
-
-                    throw;
-                }
+                return await _context.Attendances.ToListAsync();
             }
-
-            public override async Task<bool> Delete(int id)
+            catch (Exception)
             {
-                try
-                {
-                    var exist = await dbSet.Where(x => x.Id == id)
-                        .FirstOrDefaultAsync();
-                    if (exist == null) return false;
-                    dbSet.Remove(exist);
-                    return true;
-                }
-                catch (Exception)
-                {
 
-                    throw;
-                }
+                throw;
             }
         }
+
+        public async Task AddAttendance(Attendance attendances)
+        {
+           await _context.AddRangeAsync(attendances);    
+            _context.SaveChanges();
+        }
+
+        public  async Task UpdateAttendance(Attendance attendance)
+        {
+             _context.Attendances.Update(attendance);
+            _context.SaveChanges();
+
+        }
+
+        public async Task DeleteAttendance(int Id)
+        {
+            var Cat = _context.Attendances.Where(x => x.Id == Id).FirstOrDefault();
+
+            if (Cat != null) 
+            {
+                _context.Attendances.Remove(Cat);
+            }
+         
+
+        }
+    }
     
 }
 

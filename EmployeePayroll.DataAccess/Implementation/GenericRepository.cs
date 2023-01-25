@@ -20,63 +20,38 @@ namespace EmployeePayroll.DataAccess.Implementation
             _context = context;
             dbSet = _context.Set<T>();
         }
-        public virtual async Task<bool> Add(T entity)
+        public virtual async Task Add(T entity)
         {
-            try
-            {
-                if (entity == null)
-                {
-                    throw new ArgumentNullException("entity");
-                }
-                this.dbSet.Add(entity);
-                this._context.SaveChanges();
-                 return true;
-            }
-            catch (DbEntityValidationException dbEx)
-            {
-                var msg = string.Empty;
+           
+                    _context.Set<T>().Add(entity);
+                    _context.SaveChanges();
 
-                //foreach (var validationErrors in dbEx.EntityValidationErrors)
-                //{
-                //    foreach (var validationError in validationErrors)
-                //    {
-                //        msg += string.Format("Property: {0} Error: {1}", validationError.PropertyName, validationError.ErrorMessage) + Environment.NewLine;
-                //    }
-                //}.
-
-                var fail = new Exception(msg, dbEx);
-                throw fail;
-            }
-            //  await dbSet.AddAsync(entity);
             
         }
 
-        public virtual Task<bool> Delete(int id)
+        public virtual async Task Delete(T entity)
         {
-            throw new NotImplementedException();
+            _context.Set<T>().Remove(entity);
         }
 
         public virtual async Task<IEnumerable<T>> Find(Expression<Func<T, bool>> predicate)
         {
-            return await dbSet.Where(predicate).ToListAsync();
+            return await dbSet.Where(predicate).AsNoTracking().ToListAsync();
         }
 
-        public virtual Task<IEnumerable<T>> GetAll()
+        public virtual async Task<IEnumerable<T>> GetAll()
         {
-            throw new NotImplementedException();
+            return  _context.Set<T>().AsNoTracking();
         }
 
-        public virtual async Task<T> GetById(int id)
+
+        public async virtual Task Update(T entity)
         {
-            return await dbSet.FindAsync();
-        }
 
-        public virtual void Update(T entity)
-        {
-           
-           
-                 throw new NotImplementedException();
+            _context.Set<T>().Update(entity);
 
         }
+
+      
     }
 }

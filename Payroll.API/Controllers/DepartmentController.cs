@@ -27,7 +27,7 @@ namespace Payroll.API.Controllers
         [HttpGet("{id}")]
         public async Task<Department> Get(int id)
         {
-            return await _unitOfWork.Department.GetById(id);
+            return  _unitOfWork.Department.Find(x => x.Id ==id).Result.FirstOrDefault();
         }
 
         // POST api/<DepartmentController>

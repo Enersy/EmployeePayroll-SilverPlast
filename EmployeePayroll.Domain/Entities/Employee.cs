@@ -22,6 +22,9 @@ namespace EmployeePayroll.Domain.Entities
         public string phoneNumber { get; set; } = string.Empty ;
         public string Address { get; set; } = string.Empty;
         public string  passport { get; set; } = string.Empty;
+        public string accountNumber { get; set; } = string.Empty;
+        public string gender { get; set; } = string.Empty;
+
 
 
     }

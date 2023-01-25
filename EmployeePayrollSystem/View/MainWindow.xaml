@@ -38,46 +38,39 @@
             </Expander>
                 <Expander Header="Attendance Manager" FontSize="20">
                     <StackPanel>
-                         <Button FontSize="15" Content="Daily Attendance" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickEmpAttendance"   />
+                         <Button FontSize="15" Content="Daily Attendance" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickEmpAttendance" BorderThickness="0,0,0,0"   />
                     </StackPanel>
                 </Expander>
                 <Expander Header="Salary Manager" FontSize="20">
                     <StackPanel>
-                        <TextBlock FontSize="15" Margin="20,0,0,5"> Silve Plast Payroll Management System thh</TextBlock>
-                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
-                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
-                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
-                    </StackPanel>
+                        <Button FontSize="15" Content="Salary Earner" Margin="20,0,0,5" UseLayoutRounding="False" />
+                        <Button FontSize="15" Content="Wage Earner" Margin="20,0,0,5" UseLayoutRounding="False" />
+                        <Button FontSize="15" Content="Piece Rate" Margin="20,0,0,5" UseLayoutRounding="False"  />
+                   
+                </StackPanel>
                 </Expander>
                 <Expander Header="Loan Manager" FontSize="20">
                     <StackPanel>
-                        <Button FontSize="15" Content="Loan application" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickLoanApplication"   />
-                        <Button FontSize="15" Content="Manage Loan" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickEmpLoanManager"   />
-
+                        <Button FontSize="15" Content="Apply Loan" Margin="20,0,0,5" UseLayoutRounding="False" />
+                        <Button FontSize="15" Content="Manage Loan" Margin="20,0,0,5" UseLayoutRounding="False" />
+                        <Button FontSize="15" Content="Apply Cash Advance" Margin="20,0,0,5" UseLayoutRounding="False" />
+                        <Button FontSize="15" Content="Manage Cash Advance" Margin="20,0,0,5" UseLayoutRounding="False" />
                     </StackPanel>
                 </Expander>
                 <Expander Header="Admin Manager" FontSize="20">
                     <StackPanel>
-                        <TextBlock FontSize="15" Margin="20,0,0,5"> Silve Plast Payroll Management System thh</TextBlock>
-                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
-                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
-                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                        <Button FontSize="15" Content="Register Admin" Margin="20,0,0,5" UseLayoutRounding="False"/>
+                        <Button FontSize="15" Content="Manage Admin" Margin="20,0,0,5" UseLayoutRounding="False"/>
+
                     </StackPanel>
                 </Expander>
-                <Expander Header="Leave Manager" FontSize="20">
-                    <StackPanel>
-                        <TextBlock FontSize="15" Margin="20,0,0,5"> Silve Plast Payroll Management System thh</TextBlock>
-                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
-                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
-                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
-                    </StackPanel>
-                </Expander>
+                
                 <Expander Header="Report Manager" FontSize="20">
                     <StackPanel>
-                        <TextBlock FontSize="15" Margin="20,0,0,5"> Silve Plast Payroll Management System thh</TextBlock>
-                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
-                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
-                        <TextBlock FontSize="15" Margin="20,0,0,5">Silve Plast Payroll Management System thh</TextBlock>
+                        <Button FontSize="15" Content="Loan Report" Margin="20,0,0,5" UseLayoutRounding="False" />
+                        <Button FontSize="15" Content="Attendance Report" Margin="20,0,0,5" UseLayoutRounding="False" />
+                        <Button FontSize="15" Content="Monthly Report" Margin="20,0,0,5" UseLayoutRounding="False" />
+                        <Button FontSize="15" Content="Annual Report" Margin="20,0,0,5" UseLayoutRounding="False" />
                     </StackPanel>
                 </Expander>
                 <Expander Header="Application Settings" FontSize="20">

@@ -1,4 +1,5 @@
 ﻿using EmployeePayroll.DataAccess.Context;
+using EmployeePayroll.Domain.Entities;
 using EmployeePayroll.Domain.Repository;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace EmployeePayroll.DataAccess.Implementation
 
         public IEmpPieceRateRepository PieceRate {get;  }
 
-        public IEmpWagerSalaryDetails EmpWagerSalaryDetails {get;  }
+        public IEmpWagerSalaryDetailsRepository EmpWagerSalaryDetails {get;  }
         public IDesignationRepository Designation { get; set; }
 
         public ISalaryDetailsRepository SalaryDetails {get;  }
@@ -43,7 +44,12 @@ namespace EmployeePayroll.DataAccess.Implementation
             Category = new CategoryRepository(_context);
             SalaryMatrix = new SalaryMatrixRepository(_context);
             Employee = new EmployeeRepository(_context);
-            
+            EmpWagerSalaryDetails = new WagerSalaryDetailRepository(_context);
+            PieceRate = new PieceRateSalaryDetailsRepository(_context);
+
+
+
+
         }
         public void Dispose()
         {

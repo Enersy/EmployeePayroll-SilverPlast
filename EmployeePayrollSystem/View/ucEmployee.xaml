@@ -50,23 +50,30 @@
 
                     <TextBlock Height="40">
                          <Label Content="Date of Birth"/>
-                            <DatePicker x:Name="txtDob" Text="{Binding EmpDob, Mode=TwoWay}" Width="130"/>
+                            <DatePicker x:Name="txtDob"
+                                        SelectedDateFormat="Short"
+                                        SelectedDate="{Binding EmpDob, Mode=TwoWay}" Width="130"/>
                              <Label Content="Next of Kin"/>
                          <TextBox x:Name="txtNextofKin" Text="{Binding NextOfKin, Mode=TwoWay}" Width="150"/>
                          <Label Content="Date Joined"/>
 
 
-                    <DatePicker x:Name="txtDateJoined"  Text="{Binding EmpJob ,Mode=TwoWay}" Width="130"/>
+                    <DatePicker x:Name="txtDateJoined"  
+                                SelectedDateFormat="Short"
+                                SelectedDate="{Binding EmpJob ,Mode=TwoWay}" Width="130"/>
 
                     </TextBlock>
 
                     <TextBlock Width="700" Height="120" >
                         <Label Margin="0,0,0,70" Content="Staff Account No:"/>
-                        <TextBox Margin="0,0,-200,70" Width="150" />
+                        <TextBox x:Name="txtAccountNumber" Margin="0,0,-200,70" Width="150" Text="{Binding AccountNumber}" />
                         <Label Margin="0,0,-450,70" Width="52"  >Gender :</Label>
-                        <ComboBox Margin="0,0,-640,70" Width="120"></ComboBox>
+                        <ComboBox Name="cboGender" Margin="0,0,-640,70" Width="120" SelectedItem="{Binding Gender}" >
+                            <ComboBoxItem Content="Male"/>
+                             <ComboBoxItem Content="Female"/>
+                        </ComboBox>
                         <Label  Margin="0,0,0,0" RenderTransformOrigin="-2.303,0.578" HorizontalAlignment="Left">Address</Label>
-                        <TextBox Width="300" Margin="0,0,50,-12" AcceptsReturn="True" Text="{Binding Address, Mode=TwoWay}" TextWrapping="Wrap" Height="50"/>
+                        <TextBox x:Name="txtAddress" Width="300" Margin="0,0,50,-12" AcceptsReturn="True" Text="{Binding Address, Mode=TwoWay}" TextWrapping="Wrap" Height="50"/>
                         <Image HorizontalAlignment="Right"
                                Width="120" Height="90"
                                x:Name="imagePicture"/>

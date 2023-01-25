@@ -9,5 +9,9 @@ namespace EmployeePayroll.Domain.Repository
 {
     public interface IAttendanceRepository:IGenericRepository<Attendance>
     {
+        Task<IEnumerable<Attendance>> GetAllAttendance();
+        Task UpdateAttendance(Attendance attendance);
+        Task DeleteAttendance(int Id);
+        Task AddAttendance(Attendance attendances);
     }
 }

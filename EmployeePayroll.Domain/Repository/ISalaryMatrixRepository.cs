@@ -9,8 +9,6 @@ namespace EmployeePayroll.Domain.Repository
 {
     public interface ISalaryMatrixRepository:IGenericRepository<SalaryMatrix>
     {
-        Task<IEnumerable<SalaryMatrix>> GetAllSalaryMatrix();
-        Task UpdateSalaryMatrix(SalaryMatrix salaryMatrix);
-        Task DeleteSalaryMatrix(int Id);
+      
     }
 }

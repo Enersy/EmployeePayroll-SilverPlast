@@ -12,7 +12,7 @@ namespace EmployeePayroll.Domain.Repository
         IAttendanceRepository Attendance { get; }
         IDeductionRepository Deduction { get; }
         IEmpPieceRateRepository PieceRate { get; }
-        IEmpWagerSalaryDetails EmpWagerSalaryDetails { get; }
+        IEmpWagerSalaryDetailsRepository EmpWagerSalaryDetails { get; }
         ISalaryDetailsRepository SalaryDetails { get; }
         ILoanRepository Loan { get; }
         IDepartmentRepository Department { get; }

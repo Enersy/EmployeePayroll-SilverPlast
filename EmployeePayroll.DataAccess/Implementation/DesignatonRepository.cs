@@ -18,21 +18,6 @@ namespace EmployeePayroll.DataAccess.Implementation
 
 
 
-        public override async Task<bool> Delete(int id)
-        {
-            try
-            {
-                var exist = await dbSet.Where(x => x.Id == id)
-                    .FirstOrDefaultAsync();
-                if (exist == null) return false;
-                dbSet.Remove(exist);
-                return true;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
+       
     }
 }

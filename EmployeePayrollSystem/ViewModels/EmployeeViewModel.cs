@@ -42,9 +42,11 @@ namespace EmployeePayrollSystem.ViewModels
         public ObservableCollection<Employee> empList;
         [ObservableProperty]
         public ObservableCollection<Employee> querryResultList;
-        
-
-
+        [ObservableProperty]
+        public string gender;
+        [ObservableProperty]
+        public string accountNumber;
+      
         private readonly IEmployeeService _service;
         
         public EmployeeViewModel()
@@ -53,7 +55,6 @@ namespace EmployeePayrollSystem.ViewModels
             LoadData();
         }
 
-       
 
         [RelayCommand]
         public async Task EmpSave()
@@ -63,14 +64,16 @@ namespace EmployeePayrollSystem.ViewModels
             employee.empLastName = EmpLastName;
             employee.empTitle = EmpTitle;
             employee.empCategory = EmpCategory;
-            employee.empDob = EmpDob.Date;
-            employee.empJob = EmpJob.Date;
+            employee.empDob = EmpDob;
+            employee.empJob = EmpJob;
             employee.nextOfKin = NextOfKin;
             employee.empCode = EmpCode;
             employee.Address = Address;
             employee.empFirstName = EmpFirstName;
             employee.passport = Passport;
             employee.empId = EmpId;
+            employee.gender = Gender;
+            employee.accountNumber = AccountNumber;
 
             try
             {
@@ -83,15 +86,7 @@ namespace EmployeePayrollSystem.ViewModels
                         MessageBox.Show("Employee Record Saved Successfully", "Save Operation");
                     }
                 }
-                else
-                {
-                    var response = await _service.UpdateEmployee(employee);
-                    //  
-                    if (response.IsSuccessStatusCode)
-                    {
-                        MessageBox.Show("Employee Record Updated Successfully", "Update Operation");
-                    }
-                }
+               
                    
             }
             catch (Exception ex)
@@ -104,37 +99,7 @@ namespace EmployeePayrollSystem.ViewModels
 
         }
 
-        [RelayCommand]
-        public async Task SearchEmployee() 
-        {
-            var emp = from item  in EmpList 
-                      where item.empTitle == EmpTitle && item.empCode == EmpCode
-                      select item;
-            if (emp != null) 
-            {
-                QuerryResultList = new ObservableCollection<Employee>( emp.ToList());
-            }
-            else
-            {
-                MessageBox.Show("Staff Record not Found", "Query Operation");
-            }
-        }
-
-        
-        public async void DeleteEmployee() 
-        {
-            var response = await _service.DeleteEmployee(EmpId);
-            if (response.IsSuccessStatusCode)
-            {
-                if (QuerryResultList.Count != 0)
-                {
-                   
-                    QuerryResultList.RemoveAt(0);
-                }
-               
-            }
-        }
-        
+      
         
         public async Task LoadData() 
         {

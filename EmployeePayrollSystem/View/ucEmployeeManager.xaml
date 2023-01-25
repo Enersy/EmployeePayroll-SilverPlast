@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:EmployeePayrollSystem.View"
              xmlns:viewmodels="clr-namespace:EmployeePayrollSystem.ViewModels"
-             d:DataContext="{d:DesignInstance Type=viewmodels:EmployeeViewModel}"
+             d:DataContext="{d:DesignInstance Type=viewmodels:EmployeeManagerViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="Azure">
@@ -41,7 +41,7 @@
                     <DataGridTextColumn Header=" Staff Code" Binding="{Binding Path=empCode}"/>
                     <DataGridTextColumn Header="First Name" Binding="{Binding Path=empFirstName}"/>
                     <DataGridTextColumn Header="Last Name" Binding="{Binding Path=Address}"/>
-                    
+
                     <DataGridTemplateColumn Header="Edit Action"/>
 
                     <DataGridTemplateColumn>
@@ -69,7 +69,86 @@
 
             </DataGrid>
         </StackPanel>
-        <local:ucEmployee Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" Width="776" Height="270"/>
+        <StackPanel Grid.Row="2" Grid.Column="1" VerticalAlignment="Top">
+            <StackPanel HorizontalAlignment="Center">
+                <WrapPanel >
+
+
+                    <TextBlock Height="40" Width="700">
+                         <Label>Employee Code</Label>
+                    <TextBox x:Name="txtEmpCode"  Text="{Binding EmpCode,Mode=TwoWay}"  Width="130"></TextBox>
+                         <Label> Category:
+                    </Label>
+                    <ComboBox x:Name="cboCategory" Width="150" Text="{Binding EmpCategory ,Mode=TwoWay}" Initialized="cboCategory_Initialized"  >
+
+                    </ComboBox>
+
+
+                    <Label Width="70" HorizontalAlignment="Right">Title:</Label>
+                    <ComboBox x:Name="cboDepartmen" Width="120" Text="{Binding EmpTitle, Mode=TwoWay}" Initialized="cboDepartment_Initialized"></ComboBox>
+
+                    </TextBlock>
+
+                    <TextBlock Height="40" Width="700" HorizontalAlignment="Center" >
+                        <Label>First Name:</Label>
+                    <TextBox x:Name="txtFirstName" Text="{Binding EmpFirstName, Mode=TwoWay}" Width="140" />
+                    <Label>Last Name :</Label>
+                    <TextBox x:Name="txtLastName" Text="{Binding EmpLastName, Mode=TwoWay}"  Width="120"/>
+                        <Label>Phone Number:</Label>
+                    <TextBox x:Name="txtPhoneNumber" Text="{Binding PhoneNumber , Mode=TwoWay}"  Width="130"/>
+                    </TextBlock>
+
+                    <TextBlock Height="40">
+                         <Label Content="Date of Birth"/>
+                            <DatePicker x:Name="txtDob"
+                                        SelectedDateFormat="Short"
+                                        SelectedDate="{Binding EmpDob, Mode=TwoWay}" Width="130"/>
+                             <Label Content="Next of Kin"/>
+                         <TextBox x:Name="txtNextofKin" Text="{Binding NextOfKin, Mode=TwoWay}" Width="150"/>
+                         <Label Content="Date Joined"/>
+
+
+                    <DatePicker x:Name="txtDateJoined"  
+                                SelectedDateFormat="Short"
+                                SelectedDate="{Binding EmpJob ,Mode=TwoWay}" Width="130"/>
+
+                    </TextBlock>
+
+                    <TextBlock Width="700" Height="120" >
+                        <Label Margin="0,0,0,70" Content="Staff Account No:"/>
+                        <TextBox x:Name="txtAccountNumber" Margin="0,0,-200,70" Width="150" Text="{Binding AccountNumber,Mode=TwoWay}" />
+                        <Label Margin="0,0,-450,70" Width="52"  >Gender :</Label>
+                        <ComboBox Name="cboGender" Margin="0,0,-640,70" Width="120" Text="{Binding Gender, Mode=TwoWay}" >
+                            <ComboBox.Items>
+                                <ComboBoxItem Content="Male"/>
+                                 <ComboBoxItem Content="Female"/>
+                             </ComboBox.Items>
+                        </ComboBox>
+                        <Label  Margin="0,0,0,0" RenderTransformOrigin="-2.303,0.578" HorizontalAlignment="Left">Address</Label>
+                        <TextBox x:Name="txtAddress" Width="300" Margin="0,0,50,-12" AcceptsReturn="True" Text="{Binding Address, Mode=TwoWay}" TextWrapping="Wrap" Height="50"/>
+                        <Image HorizontalAlignment="Right"
+                               Width="120" Height="90"
+                               x:Name="imagePicture"/>
+                        
+                        <Button x:Name="btnBrowse" Content="Browse Passport" Width="100" Margin="-230,0,0,-20" Click="btnClickPassport"/>
+                        <TextBox x:Name="txtFileName"  Text="{Binding Passport , Mode=TwoWay}" Width="120" Margin="-60,0,0,-20" IsEnabled="False"/>
+                    </TextBlock>
+
+
+
+                </WrapPanel>
+
+            </StackPanel>
+
+            <TextBlock Width="700"><InlineUIContainer>
+                            <TextBox HorizontalAlignment="Left" Visibility="Hidden" Text="{Binding EmpId}" x:Name="txtEmpId"  Width="280" />
+                     
+                        </InlineUIContainer><Run Text=" "/>
+                              <TextBox Visibility="Hidden" Text="{Binding EmpId, Mode=TwoWay}" />
+                            <Button HorizontalAlignment="Center"  Width="70" HorizontalContentAlignment="Center" Content="Save" Command="{Binding EmpSaveCommand}"   />
+
+            </TextBlock>
+        </StackPanel>
 
 
     </Grid>

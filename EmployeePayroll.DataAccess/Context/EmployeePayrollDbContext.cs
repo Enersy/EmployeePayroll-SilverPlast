@@ -20,9 +20,9 @@ namespace EmployeePayroll.DataAccess.Context
         public DbSet<Loan> Loans { get; set; }
         public DbSet<Grade> Grades { get; set; }
         public DbSet<Department> Departments { get; set; }
-        public DbSet<PieceRateAllowance> PieceRateAllowances { get; set; }
-        public DbSet<WagersAllowance> WagersAllowances { get; set; }
-        public DbSet<SalaryAllowance> SalaryAllowances { get; set; }
+        public DbSet<EmpPieceRateSalaryDetails> PieceRateeSalaryDetails { get; set; }
+        public DbSet<EmpWagerSalaryDetails> WagerseSalaryDetails { get; set; }
+        public DbSet<EmpSalaryDetails> SalaryeSalaryDetails { get; set; }
         public DbSet<Allowance> Allowances { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<SalaryMatrix> salaryMatrices { get; set; }

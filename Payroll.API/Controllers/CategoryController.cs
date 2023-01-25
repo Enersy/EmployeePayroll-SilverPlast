@@ -27,7 +27,8 @@ namespace Payroll.API.Controllers
         [HttpGet("{id}")]
         public async Task<Category> Get(int id)
         {
-            return await _unitOfWork.Category.GetById(id);
+            var cat =  _unitOfWork.Category.Find(x=>x.Id ==id).Result.FirstOrDefault();
+            return cat;
         }
 
         // POST api/<CategoryController>

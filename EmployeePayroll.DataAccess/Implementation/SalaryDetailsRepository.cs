@@ -12,38 +12,13 @@ namespace EmployeePayroll.DataAccess.Implementation
 {
     public class SalaryDetailsRepository : GenericRepository<EmpSalaryDetails>, ISalaryDetailsRepository
     {
+        public EmployeePayrollDbContext Context { get; }
+
         public SalaryDetailsRepository(EmployeePayrollDbContext context) : base(context)
         {
+            Context = context;
         }
 
-        public override async Task<IEnumerable<EmpSalaryDetails>> GetAll()
-        {
-            try
-            {
-                return await dbSet.ToListAsync();
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
-        public override async Task<bool> Delete(int id)
-        {
-            try
-            {
-                var exist = await dbSet.Where(x => x.TransactionId == id)
-                    .FirstOrDefaultAsync();
-                if (exist == null) return false;
-                dbSet.Remove(exist);
-                return true;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
+       
     }
 }

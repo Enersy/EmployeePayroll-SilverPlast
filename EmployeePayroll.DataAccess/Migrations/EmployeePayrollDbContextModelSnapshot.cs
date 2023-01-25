@@ -58,7 +58,14 @@ namespace EmployeePayroll.DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("EmpId")
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EmpCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EmpName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -67,6 +74,16 @@ namespace EmployeePayroll.DataAccess.Migrations
 
                     b.Property<DateTime>("OutTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Shift")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("TotalHrs")
+                        .HasColumnType("float");
+
+                    b.Property<double>("TotalTime")
+                        .HasColumnType("float");
 
                     b.HasKey("Id");
 
@@ -119,6 +136,204 @@ namespace EmployeePayroll.DataAccess.Migrations
                     b.ToTable("Departments");
                 });
 
+            modelBuilder.Entity("EmployeePayroll.Domain.Entities.EmpPieceRateSalaryDetails", b =>
+                {
+                    b.Property<int>("TransactionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionId"));
+
+                    b.Property<int>("EmployeeCode")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EmployeeName")
+                        .HasColumnType("int");
+
+                    b.Property<double>("empBasic")
+                        .HasColumnType("float");
+
+                    b.Property<double>("empBonus")
+                        .HasColumnType("float");
+
+                    b.Property<string>("empDept")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("empGross")
+                        .HasColumnType("float");
+
+                    b.Property<double>("empHRA")
+                        .HasColumnType("float");
+
+                    b.Property<double>("empMA")
+                        .HasColumnType("float");
+
+                    b.Property<double>("empOverTime")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("empSalaryPaidDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("empSalaryWeek")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("empSalaryYear")
+                        .HasColumnType("datetime2");
+
+                    b.Property<double>("empTA")
+                        .HasColumnType("float");
+
+                    b.Property<double>("empTax")
+                        .HasColumnType("float");
+
+                    b.Property<string>("empTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("empTotalSalary")
+                        .HasColumnType("float");
+
+                    b.Property<double>("empUtilityA")
+                        .HasColumnType("float");
+
+                    b.HasKey("TransactionId");
+
+                    b.ToTable("PieceRateeSalaryDetails");
+                });
+
+            modelBuilder.Entity("EmployeePayroll.Domain.Entities.EmpSalaryDetails", b =>
+                {
+                    b.Property<int>("TransactionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionId"));
+
+                    b.Property<int>("EmployeeCode")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EmployeeName")
+                        .HasColumnType("int");
+
+                    b.Property<double>("empBasic")
+                        .HasColumnType("float");
+
+                    b.Property<double>("empBonus")
+                        .HasColumnType("float");
+
+                    b.Property<string>("empDept")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("empGross")
+                        .HasColumnType("float");
+
+                    b.Property<double>("empHRA")
+                        .HasColumnType("float");
+
+                    b.Property<double>("empMA")
+                        .HasColumnType("float");
+
+                    b.Property<double>("empOverTime")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("empSalaryMonth")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("empSalaryPaidDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("empSalaryYear")
+                        .HasColumnType("datetime2");
+
+                    b.Property<double>("empTA")
+                        .HasColumnType("float");
+
+                    b.Property<double>("empTax")
+                        .HasColumnType("float");
+
+                    b.Property<string>("empTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("empTotalSalary")
+                        .HasColumnType("float");
+
+                    b.Property<double>("empUtilityA")
+                        .HasColumnType("float");
+
+                    b.HasKey("TransactionId");
+
+                    b.ToTable("SalaryeSalaryDetails");
+                });
+
+            modelBuilder.Entity("EmployeePayroll.Domain.Entities.EmpWagerSalaryDetails", b =>
+                {
+                    b.Property<int>("TransactionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TransactionId"));
+
+                    b.Property<int>("EmployeeCode")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EmployeeName")
+                        .HasColumnType("int");
+
+                    b.Property<double>("empBasic")
+                        .HasColumnType("float");
+
+                    b.Property<double>("empBonus")
+                        .HasColumnType("float");
+
+                    b.Property<string>("empDept")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("empGross")
+                        .HasColumnType("float");
+
+                    b.Property<double>("empHRA")
+                        .HasColumnType("float");
+
+                    b.Property<double>("empMA")
+                        .HasColumnType("float");
+
+                    b.Property<double>("empOverTime")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("empSalaryPaidDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("empSalaryWeek")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("empSalaryYear")
+                        .HasColumnType("datetime2");
+
+                    b.Property<double>("empTA")
+                        .HasColumnType("float");
+
+                    b.Property<double>("empTax")
+                        .HasColumnType("float");
+
+                    b.Property<string>("empTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("empTotalSalary")
+                        .HasColumnType("float");
+
+                    b.Property<double>("empUtilityA")
+                        .HasColumnType("float");
+
+                    b.HasKey("TransactionId");
+
+                    b.ToTable("WagerseSalaryDetails");
+                });
+
             modelBuilder.Entity("EmployeePayroll.Domain.Entities.Employee", b =>
                 {
                     b.Property<int>("empId")
@@ -128,6 +343,10 @@ namespace EmployeePayroll.DataAccess.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("empId"));
 
                     b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("accountNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -154,6 +373,10 @@ namespace EmployeePayroll.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("empTitle")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("gender")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -277,7 +500,7 @@ namespace EmployeePayroll.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PieceRateAllowances");
+                    b.ToTable("PieceRateAllowance");
                 });
 
             modelBuilder.Entity("EmployeePayroll.Domain.Entities.SalaryAllowance", b =>
@@ -311,7 +534,7 @@ namespace EmployeePayroll.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SalaryAllowances");
+                    b.ToTable("SalaryAllowance");
                 });
 
             modelBuilder.Entity("EmployeePayroll.Domain.Entities.SalaryMatrix", b =>
@@ -419,7 +642,7 @@ namespace EmployeePayroll.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("WagersAllowances");
+                    b.ToTable("WagersAllowance");
                 });
 
             modelBuilder.Entity("EmployeePayroll.Domain.Entities.Allowance", b =>
