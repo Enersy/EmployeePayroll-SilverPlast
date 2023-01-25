@@ -27,7 +27,7 @@ namespace Payroll.API.Controllers
         [HttpGet("{id}")]
         public async Task<Employee> Get(int id)
         {
-            return (Employee)await _unitOfWork.Employee.Find(x => x.empId == id);
+            return (Employee) _unitOfWork.Employee.Find(x => x.empId.Equals(id));
         }
 
         // POST api/<EmployeeController>

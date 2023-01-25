@@ -9,11 +9,11 @@ namespace EmployeePayroll.Domain.Repository
 {
     public interface IGenericRepository<T> where T : class
     {
-        Task<IEnumerable<T>> GetAll();
+        IQueryable<T> GetAll();
         Task Add(T entity);
         Task Update(T entity);
         Task Delete(T entity);
-        Task<IEnumerable<T>> Find(Expression<Func<T, bool>> predicate);
+        IQueryable<T> Find(Expression<Func<T, bool>> predicate);
         
     }
 }

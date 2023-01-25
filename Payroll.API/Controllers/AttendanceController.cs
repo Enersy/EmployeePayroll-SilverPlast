@@ -27,7 +27,7 @@ namespace Payroll.API.Controllers
         [HttpGet("{id}")]
         public async Task<Attendance> Get(int id)
         {
-            return (Attendance)await _unitOfWork.Attendance.Find(x =>x.Id == id);
+            return (Attendance) _unitOfWork.Attendance.Find(x =>x.Id == id);
         }
 
         // POST api/<AttendanceController>

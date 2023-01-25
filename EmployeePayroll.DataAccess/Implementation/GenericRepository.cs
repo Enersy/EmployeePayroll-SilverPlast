@@ -34,12 +34,12 @@ namespace EmployeePayroll.DataAccess.Implementation
             _context.Set<T>().Remove(entity);
         }
 
-        public virtual async Task<IEnumerable<T>> Find(Expression<Func<T, bool>> predicate)
+        public virtual IQueryable<T> Find(Expression<Func<T, bool>> predicate)
         {
-            return await dbSet.Where(predicate).AsNoTracking().ToListAsync();
+            return  _context.Set<T>().Where(predicate).AsNoTracking();
         }
 
-        public virtual async Task<IEnumerable<T>> GetAll()
+        public virtual  IQueryable<T> GetAll()
         {
             return  _context.Set<T>().AsNoTracking();
         }

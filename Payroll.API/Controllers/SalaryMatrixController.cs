@@ -20,14 +20,14 @@ namespace Payroll.API.Controllers
         [HttpGet]
         public async Task<IEnumerable<SalaryMatrix>> Get()
         {
-            return await _unitOfWork.SalaryMatrix.GetAll();
+            return  _unitOfWork.SalaryMatrix.GetAll();
         }
 
         // GET api/<SalaryMatrixController>/5
         [HttpGet("{id}")]
         public async Task<SalaryMatrix> Get(int id)
         {
-            return (SalaryMatrix)await _unitOfWork.SalaryMatrix.Find(x => x.Id == id);
+            return (SalaryMatrix) _unitOfWork.SalaryMatrix.Find(x => x.Id == id);
         }
 
         // POST api/<SalaryMatrixController>
@@ -50,7 +50,7 @@ namespace Payroll.API.Controllers
         [HttpDelete("{id}")]
         public async Task Delete(int id)
         {
-           var sm = _unitOfWork.SalaryMatrix.Find(x => x.Id == id).Result.FirstOrDefault();
+           var sm = _unitOfWork.SalaryMatrix.Find(x => x.Id == id).FirstOrDefault();
             if (sm != null)
                  await _unitOfWork.SalaryMatrix.Delete(sm);
 

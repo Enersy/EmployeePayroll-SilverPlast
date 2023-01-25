@@ -19,14 +19,14 @@ namespace Payroll.API.Controllers
         [HttpGet]
         public async Task<IEnumerable<EmpWagerSalaryDetails>> Get()
         {
-            return await _unitOfWork.EmpWagerSalaryDetails.GetAll();
+            return  _unitOfWork.EmpWagerSalaryDetails.GetAll();
         }
 
         // GET api/<WagerSalaryDetailsController>/5
         [HttpGet("{id}")]
         public async Task<EmpWagerSalaryDetails> Get(int id)
         {
-            var ws = _unitOfWork.EmpWagerSalaryDetails.Find(x => x.TransactionId == id).Result.FirstOrDefault();
+            var ws = _unitOfWork.EmpWagerSalaryDetails.Find(x => x.TransactionId.Equals( id)).FirstOrDefault();
             return  ws;
         }
 
@@ -49,7 +49,7 @@ namespace Payroll.API.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            var ws = _unitOfWork.EmpWagerSalaryDetails.Find(x => x.TransactionId == id).Result.FirstOrDefault();
+            var ws = _unitOfWork.EmpWagerSalaryDetails.Find(x => x.TransactionId.Equals(id)).FirstOrDefault();
             if (ws != null)
             {
                 _unitOfWork.EmpWagerSalaryDetails.Delete(ws);
