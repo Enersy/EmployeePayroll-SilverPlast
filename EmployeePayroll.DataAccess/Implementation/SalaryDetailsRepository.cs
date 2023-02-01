@@ -19,6 +19,19 @@ namespace EmployeePayroll.DataAccess.Implementation
             Context = context;
         }
 
-       
+        //public async Task<IEnumerable<EmpSalaryDetails>> GetEmpSchedule(string EmpCode)
+        //{
+        //    var schedule = Context.Employees.Where(x=>x.empCode == EmpCode)
+        //        .Include(i=> i.empCategory)
+        //        .Include(a=>a.Attendances)
+        //        .Include(d=>d.empTitle)
+        //        .ToListAsync();
+
+        //    return (IEnumerable<EmpSalaryDetails>)schedule;
+
+
+        //}
+
+
     }
 }

@@ -9,5 +9,6 @@ namespace EmployeePayroll.Domain.Repository
 {
     public interface ISalaryDetailsRepository:IGenericRepository<EmpSalaryDetails>
     {
+        //Task<IEnumerable<EmpSalaryDetails>> GetEmpSchedule(string EmpCode);
     }
 }

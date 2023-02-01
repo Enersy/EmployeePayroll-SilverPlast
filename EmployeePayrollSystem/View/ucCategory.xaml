@@ -55,9 +55,7 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Visibility="Hidden" Header="Category Id" Binding="{Binding Path=Id}"/>
                     <DataGridTextColumn Header="Category Name" Binding="{Binding Path=Name}"/>
-                    <DataGridTemplateColumn Header="Edit Action"/>
-
-                    <DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Edit Action">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Click="btnEditCat" >
@@ -68,8 +66,7 @@
                     </DataGridTemplateColumn>
 
 
-                    <DataGridTemplateColumn Header="Delete Action"/>
-                    <DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Delete Action">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Click="btnDeleteCat"  >

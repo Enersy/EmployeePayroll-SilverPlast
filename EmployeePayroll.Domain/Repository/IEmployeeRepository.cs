@@ -9,7 +9,7 @@ namespace EmployeePayroll.Domain.Repository
 {
     public interface IEmployeeRepository:IGenericRepository<Employee>
     {
-        Task<IEnumerable<Employee>> GetAllEmployees();
+       Task< IEnumerable<Employee>> GetAllEmployees();
         Task UpdateEmployee(Employee employee);
         Task DeleteEmployee(int Id);
     }

@@ -12,6 +12,7 @@ namespace EmployeePayroll.Domain.Entities
         public string Category { get; set; } = string.Empty;
         public string Department { get; set; } = string.Empty;
         public double DayRate { get; set; }
+        public double HourlyRate { get; set; }
         public double CashAdvance { get; set; }
         public double SmallMatRate { get; set; }
         public double BigMatRate { get; set; }

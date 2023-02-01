@@ -20,21 +20,22 @@ namespace Payroll.API.Controllers
         [HttpGet]
         public async Task<IEnumerable<Attendance>> Get()
         {
-            return await _unitOfWork.Attendance.GetAllAttendance();
+            return  _unitOfWork.Attendance.GetAll();
         }
 
         // GET api/<AttendanceController>/5
         [HttpGet("{id}")]
         public async Task<Attendance> Get(int id)
         {
-            return (Attendance) _unitOfWork.Attendance.Find(x =>x.Id == id);
+          var data =  _unitOfWork.Attendance.Find(x =>x.Id == id).FirstOrDefault();
+            return data;
         }
 
         // POST api/<AttendanceController>
         [HttpPost]
         public async Task Post([FromBody] Attendance attendance)
         {
-            await _unitOfWork.Attendance.Add(attendance);
+            await _unitOfWork.Attendance.AddAttendance(attendance);
             _unitOfWork.Save();
         }
 
@@ -42,15 +43,18 @@ namespace Payroll.API.Controllers
         [HttpPut("{id}")]
         public async Task Put(int id, [FromBody] Attendance attendance)
         {
-            await _unitOfWork.Attendance.UpdateAttendance(attendance);
+            await _unitOfWork.Attendance.Update(attendance);
             _unitOfWork.Save();
         }
 
         // DELETE api/<AttendanceController>/5
         [HttpDelete("{id}")]
         public async Task Delete(int id)
-        {
-            await _unitOfWork.Attendance.DeleteAttendance(id);
+        { 
+            var entity = _unitOfWork.Attendance.Find(x => x.Id == id).FirstOrDefault();
+            if (entity != null)
+                await _unitOfWork.Attendance.Delete(entity);
+
             _unitOfWork.Save();
         }
     }

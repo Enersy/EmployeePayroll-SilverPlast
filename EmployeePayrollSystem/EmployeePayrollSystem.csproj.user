@@ -22,10 +22,19 @@
     <Compile Update="View\ucEmployeeManager.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\ucPieceRateSalary.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\ucRegisterEmployee.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\ucSalary.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\ucSalaryMatrix.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ucWagerSalary.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -51,10 +60,19 @@
     <Page Update="View\ucEmployeeManager.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\ucPieceRateSalary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\ucRegisterEmployee.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\ucSalary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\ucSalaryMatrix.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ucWagerSalary.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

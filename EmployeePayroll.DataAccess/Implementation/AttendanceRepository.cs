@@ -13,49 +13,50 @@ namespace EmployeePayroll.DataAccess.Implementation
    
         public class AttendanceRepository : GenericRepository<Attendance>, IAttendanceRepository
         {
-            public AttendanceRepository(EmployeePayrollDbContext context) : base(context)
-            {
-            }
+        private readonly EmployeePayrollDbContext context;
+
+        public AttendanceRepository(EmployeePayrollDbContext context) : base(context)
+        {
+            this.context = context;
+        }
 
           
-        public async Task<IEnumerable<Attendance>> GetAllAttendance()
-        {
-            try
+            public async Task<IEnumerable<Attendance>> GetAllAttendance()
             {
-                return await _context.Attendances.ToListAsync();
+                try
+                {
+                    return await _context.Attendances.ToListAsync();
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
             }
-            catch (Exception)
+
+            public async Task AddAttendance(Attendance attendance)
             {
-
-                throw;
+                _context.Attendances.Add(attendance);    
+                _context.SaveChanges();
             }
-        }
 
-        public async Task AddAttendance(Attendance attendances)
-        {
-           await _context.AddRangeAsync(attendances);    
-            _context.SaveChanges();
-        }
-
-        public  async Task UpdateAttendance(Attendance attendance)
-        {
-             _context.Attendances.Update(attendance);
-            _context.SaveChanges();
-
-        }
-
-        public async Task DeleteAttendance(int Id)
-        {
-            var Cat = _context.Attendances.Where(x => x.Id == Id).FirstOrDefault();
-
-            if (Cat != null) 
+            public  async Task UpdateAttendance(Attendance attendance)
             {
-                _context.Attendances.Remove(Cat);
-            }
-         
+                 _context.Attendances.Update(attendance);
+                _context.SaveChanges();
 
+            }
+
+            public async Task DeleteAttendance(int Id)
+            {
+                var Cat = _context.Attendances.Where(x => x.Id == Id).FirstOrDefault();
+
+                if (Cat != null) 
+                {
+                    _context.Attendances.Remove(Cat);
+                }
+            }
         }
-    }
     
 }
 

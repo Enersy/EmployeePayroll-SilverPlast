@@ -10,7 +10,9 @@ namespace EmployeePayroll.Domain.Entities
     {
         public int id { get; set; }
         public string username { get; set; }
+        public string EmpName { get; set; }
         public string password { get; set; }
         public string role { get; set; }
+        
     }
 }

@@ -26,11 +26,14 @@ namespace EmployeePayroll.DataAccess.Implementation
         public IDepartmentRepository Department {get; }
         public ICategoryRepository Category { get; }
 
-        public ILoanRepository Loan {get; set; }
+        public ILoanRepository Loan {get;  }
+
         public ISalaryMatrixRepository SalaryMatrix {get;}
         public IEmployeeRepository Employee { get; }
 
+        public IAdminRepository Administrator { get; }
 
+        public ICashAdvanceRepository CashAdvance { get; }
 
         private EmployeePayrollDbContext _context;
         public UnitOfWork(EmployeePayrollDbContext employeePayrollDbContext)
@@ -46,7 +49,9 @@ namespace EmployeePayroll.DataAccess.Implementation
             Employee = new EmployeeRepository(_context);
             EmpWagerSalaryDetails = new WagerSalaryDetailRepository(_context);
             PieceRate = new PieceRateSalaryDetailsRepository(_context);
-
+            Loan = new LoanRepository(_context);
+            Administrator = new AdminRepository(_context);
+            CashAdvance = new CashAdvanceRepository(_context);
 
 
 

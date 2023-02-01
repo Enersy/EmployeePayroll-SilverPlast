@@ -66,5 +66,10 @@ namespace EmployeePayrollSystem.View
         {
             Dashboard.Content = new ucEmployeeAttendance();
         }
+
+        private void btnSalaryManager(object sender, RoutedEventArgs e)
+        {
+            Dashboard.Content = new ucSalary();
+        }
     }
 }

@@ -28,7 +28,7 @@ namespace EmployeePayrollSystem.ViewModels
         [ObservableProperty]
         public double dayRate;
         [ObservableProperty]
-        public double nightAllowanceRate;
+        public double hourlyRate;
         [ObservableProperty]
         public double utilityAllowanceRate;
         [ObservableProperty]
@@ -37,7 +37,7 @@ namespace EmployeePayrollSystem.ViewModels
         public string department;
 
         private readonly ISalaryMatrixService _service;
-
+        [ObservableProperty]
         public ObservableCollection<SalaryMatrix> matList;
 
         public SalaryMatrixViewModel()
@@ -52,14 +52,16 @@ namespace EmployeePayrollSystem.ViewModels
 
             SalaryMatrix mat = new SalaryMatrix();
             mat.Id = id;
-            mat.Department = department;
-            mat.HouseAllowanceRate = houseAllowanceRate;
+            mat.Department = Department;
+            mat.HouseAllowanceRate = HouseAllowanceRate;
             mat.DayRate = DayRate;
             mat.SmallMatRate = SmallMatRate;
             mat.BigMatRate = BigMatRate;
             mat.UtilityAllowanceRate = UtilityAllowanceRate;
-            mat.NightAllowanceRate = NightAllowanceRate;
-            mat.Category = category;
+            mat.HourlyRate = HourlyRate;
+            mat.Category = Category;
+            mat.TPFeedingAllowanceRate = TPFeedingAllowanceRate;
+
 
             try
             {
@@ -71,7 +73,7 @@ namespace EmployeePayrollSystem.ViewModels
                     //  MessageBox.Show("matartment Saved Successfully");
                     if (response.IsSuccessStatusCode)
                     {
-                        matList.Add(mat);
+                        MatList.Add(mat);
                     }
 
                 }
@@ -108,7 +110,7 @@ namespace EmployeePayrollSystem.ViewModels
             SmallMatRate = 0;
             Id = 0;
             HouseAllowanceRate = 0;
-            NightAllowanceRate = 0;
+            HourlyRate = 0;
             TPFeedingAllowanceRate = 0;
             UtilityAllowanceRate = 0;
         }
@@ -117,7 +119,7 @@ namespace EmployeePayrollSystem.ViewModels
         {
             var salaryMatrices = await _service.GetSalaryMaxs();
 
-            matList = new ObservableCollection<SalaryMatrix>(salaryMatrices.ToList());
+            MatList = new ObservableCollection<SalaryMatrix>(salaryMatrices.ToList());
              
         }
     }

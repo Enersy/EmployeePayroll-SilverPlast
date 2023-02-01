@@ -9,5 +9,6 @@ namespace EmployeePayroll.Domain.Repository
 {
     public interface ILoanRepository:IGenericRepository<Loan>
     {
+      
     }
 }

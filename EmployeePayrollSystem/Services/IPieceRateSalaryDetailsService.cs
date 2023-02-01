@@ -10,10 +10,10 @@ namespace EmployeePayrollSystem.Services
 {
     public interface IEmpPieceRateSalaryDetailsService
     {
-         Task<EmpPieceRateSalaryDetails> GetPieceRateSalaryDetailss(int id);
-        Task<HttpResponseMessage> DeletePieceRateSalaryDetailss(int Id);
-        Task<HttpResponseMessage> UpdatePieceRateSalaryDetailss(EmpPieceRateSalaryDetails PieceRateSalaryDetailss);
-        Task<IEnumerable<EmpPieceRateSalaryDetails>> GetPieceRateSalaryDetailsss();
-        Task<HttpResponseMessage> SavePieceRateSalaryDetailss(EmpPieceRateSalaryDetails PieceRateSalaryDetailss);
+         Task<EmpPieceRateSalaryDetails> GetPieceRateSalaryDetails(int id);
+        Task<HttpResponseMessage> DeletePieceRateSalaryDetails(int Id);
+        Task<HttpResponseMessage> UpdatePieceRateSalaryDetails(EmpPieceRateSalaryDetails PieceRateSalaryDetailss);
+        Task<IEnumerable<EmpPieceRateSalaryDetails>> GetPieceRateSalaryDetails();
+        Task<HttpResponseMessage> SavePieceRateSalaryDetails(EmpPieceRateSalaryDetails PieceRateSalaryDetailss);
     }
 }

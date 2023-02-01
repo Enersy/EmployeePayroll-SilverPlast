@@ -52,7 +52,8 @@ namespace EmployeePayrollSystem.View
             matrixViewModel.BigMatRate = max.BigMatRate;
             matrixViewModel.BigMatRate = max.DayRate;
             matrixViewModel.HouseAllowanceRate = max.HouseAllowanceRate;
-            matrixViewModel.NightAllowanceRate = max.NightAllowanceRate;
+            matrixViewModel.DayRate = max.DayRate;
+            matrixViewModel.HourlyRate = max.HourlyRate;
             matrixViewModel.SmallMatRate = max.SmallMatRate;
             matrixViewModel.TPFeedingAllowanceRate = max.TPFeedingAllowanceRate;
             matrixViewModel.UtilityAllowanceRate = max.UtilityAllowanceRate ;

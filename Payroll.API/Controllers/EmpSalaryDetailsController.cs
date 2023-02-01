@@ -55,5 +55,13 @@ namespace Payroll.API.Controllers
                await _unitOfWork.SalaryDetails.Delete(ws);
             }
         }
+        //[HttpGet]
+        //public IEnumerable<EmpSalaryDetails> GetEmpSchedule(string EmpCode)
+        //{
+        //    //var schedule = _unitOfWork.SalaryDetails.GetEmpSchedule(EmpCode);
+        //    //return (IEnumerable<EmpSalaryDetails>)schedule;
+            
+                            
+        //}
     }
 }

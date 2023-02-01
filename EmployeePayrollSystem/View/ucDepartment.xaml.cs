@@ -40,7 +40,6 @@ namespace EmployeePayrollSystem.View
             DataContext = ViewModel;
              categoryService = new CategoryService();
              InitializeComponent();
-            dgDeptDetails.ItemsSource = ViewModel.Deptlist;
            // ViewModel.loadData();
         }
         

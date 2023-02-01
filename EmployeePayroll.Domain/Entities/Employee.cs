@@ -14,8 +14,8 @@ namespace EmployeePayroll.Domain.Entities
         public string empCode { get; set; } = string.Empty;
         public string empFirstName { get; set; } = string.Empty;
         public string empLastName { get; set; } = string.Empty;
-        public string empTitle { get; set; } = string.Empty;
-        public string empCategory{ get; set; } = string.Empty;
+        public string empTitle { get; set; } 
+        public string empCategory{ get; set; } 
         public DateTime empDob { get; set; }
         public DateTime empJob { get; set; }
         public string nextOfKin { get; set; } = string.Empty;
@@ -24,6 +24,8 @@ namespace EmployeePayroll.Domain.Entities
         public string  passport { get; set; } = string.Empty;
         public string accountNumber { get; set; } = string.Empty;
         public string gender { get; set; } = string.Empty;
+        
+        
 
 
 

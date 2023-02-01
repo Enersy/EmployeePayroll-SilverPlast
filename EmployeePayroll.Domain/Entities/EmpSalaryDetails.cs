@@ -12,7 +12,7 @@ namespace EmployeePayroll.Domain.Entities
         [Key]
         public int TransactionId { get; set; }
         public int EmployeeCode { get; set; }
-        public int EmployeeName { get; set; }
+        public string EmployeeName { get; set; }
         public DateTime empSalaryMonth { get; set; }
         public DateTime empSalaryYear { get; set; }
         public DateTime empSalaryPaidDate { get; set; }

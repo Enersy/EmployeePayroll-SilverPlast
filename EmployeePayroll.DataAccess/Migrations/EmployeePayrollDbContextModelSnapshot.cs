@@ -22,6 +22,31 @@ namespace EmployeePayroll.DataAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("EmployeePayroll.Domain.Entities.Admin", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<string>("password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("role")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Administrator");
+                });
+
             modelBuilder.Entity("EmployeePayroll.Domain.Entities.Allowance", b =>
                 {
                     b.Property<int>("Id")
@@ -88,6 +113,35 @@ namespace EmployeePayroll.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Attendances");
+                });
+
+            modelBuilder.Entity("EmployeePayroll.Domain.Entities.CashAdvance", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<double>("AdvanceAmount")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("DateCollected")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EmployeeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("InstallmentAmount")
+                        .HasColumnType("float");
+
+                    b.Property<int>("NoOfInstallment")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CashAdvances");
                 });
 
             modelBuilder.Entity("EmployeePayroll.Domain.Entities.Category", b =>
@@ -213,8 +267,9 @@ namespace EmployeePayroll.DataAccess.Migrations
                     b.Property<int>("EmployeeCode")
                         .HasColumnType("int");
 
-                    b.Property<int>("EmployeeName")
-                        .HasColumnType("int");
+                    b.Property<string>("EmployeeName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("empBasic")
                         .HasColumnType("float");
@@ -565,6 +620,9 @@ namespace EmployeePayroll.DataAccess.Migrations
                     b.Property<string>("Department")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("HourlyRate")
+                        .HasColumnType("float");
 
                     b.Property<double>("HouseAllowanceRate")
                         .HasColumnType("float");

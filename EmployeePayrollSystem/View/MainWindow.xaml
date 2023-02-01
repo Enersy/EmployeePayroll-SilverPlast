@@ -43,7 +43,7 @@
                 </Expander>
                 <Expander Header="Salary Manager" FontSize="20">
                     <StackPanel>
-                        <Button FontSize="15" Content="Salary Earner" Margin="20,0,0,5" UseLayoutRounding="False" />
+                        <Button FontSize="15" Content="Salary Earner" Margin="20,0,0,5" UseLayoutRounding="False" Click="btnSalaryManager"  />
                         <Button FontSize="15" Content="Wage Earner" Margin="20,0,0,5" UseLayoutRounding="False" />
                         <Button FontSize="15" Content="Piece Rate" Margin="20,0,0,5" UseLayoutRounding="False"  />
                    

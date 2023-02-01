@@ -36,7 +36,7 @@
                         
                          <DatePicker x:Name="txtTodaysDate"
                                         
-                                        SelectedDate="{Binding TodaysDate, StringFormat={}{0:h:m} , Mode=TwoWay}" Width="130" SelectedDateFormat="Short" IsTodayHighlighted="False" DisplayDate="{Binding TodaysDate, StringFormat=\{\}\{0:h:m tt\}}"/>
+                                        SelectedDate="{Binding TodaysDate, StringFormat={}{hh:mm:ss tt} , Mode=TwoWay}" Width="130" SelectedDateFormat="Short" IsTodayHighlighted="False" DisplayDate="{Binding TodaysDate, StringFormat=\{hh:mm:ss tt\}}"/>
                         
                          
                     </TextBlock>

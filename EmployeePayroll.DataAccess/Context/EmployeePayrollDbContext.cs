@@ -16,6 +16,8 @@ namespace EmployeePayroll.DataAccess.Context
         }
 
         public DbSet<Attendance> Attendances { get; set; }
+        public DbSet<CashAdvance> CashAdvances { get; set; }
+        public DbSet<Admin> Administrator { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Loan> Loans { get; set; }
         public DbSet<Grade> Grades { get; set; }

@@ -8,6 +8,8 @@ namespace EmployeePayroll.Domain.Repository
 {
     public interface IUnitOfWork:IDisposable
     {
+        IAdminRepository Administrator { get; }
+        ICashAdvanceRepository CashAdvance { get; }
         IAllowanceRepository Allowance { get;  }
         IAttendanceRepository Attendance { get; }
         IDeductionRepository Deduction { get; }

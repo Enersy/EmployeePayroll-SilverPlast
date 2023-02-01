@@ -48,8 +48,8 @@
                     <TextBox x:Name="txtHouseAllowanceRate" Text="{Binding HouseAllowanceRate}" Width="75" />
                     <Label>TP Feeding Rate:</Label>
                     <TextBox x:Name="txtTpFeedingRate" Text="{Binding TPFeedingAllowanceRate}"  Width="75"/>
-                        <Label>Night Allowance Rate:</Label>
-                    <TextBox x:Name="txtNightAllowaRate" Text="{Binding NightAllowanceRate}"  Width="75"/>
+                        <Label>Hourly Rate:</Label>
+                    <TextBox x:Name="txtNightAllowaRate" Text="{Binding HourlyRate}"  Width="75"/>
                     </TextBlock>
                     
                     <TextBlock Height="40">
@@ -57,7 +57,7 @@
                             <TextBox x:Name="txtSmallMatRate" Text="{Binding SmallMatRate}" Width="150"/>
                              <Label Content="Big Mat Rate"/>
                          <TextBox x:Name="txtBigMatRate" Text="{Binding BigMatRate}" Width="150"/>
-                         <Label Content="Basic Rate"/>
+                         <Label Content="Dayly Rate"/>
 
 
                     <TextBox x:Name="txtDayRate" Text="{Binding DayRate}" Width="150"/>
@@ -89,21 +89,21 @@
             <DataGrid  x:Name="dgMatDetails" VerticalAlignment="Stretch" Height="100" HorizontalAlignment="Stretch" Margin="30,0,30,40"
                        xmlns:my ="http://schemas.microsoft.com/wpf/2008/toolkit"
                        CanUserAddRows="False"
-                       ItemsSource="{Binding matList}"
+                       ItemsSource="{Binding MatList}"
                        AutoGenerateColumns="False">
 
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Category" Binding="{Binding Path=Category}"/>
                     <DataGridTextColumn Header="Title" Binding="{Binding Path=Department}"/>
-                    <DataGridTextColumn Header="DayRate" Binding="{Binding Path=DayRate}"/>
+                    <DataGridTextColumn Header="DaylyRate" Binding="{Binding Path=DayRate}"/>
+                    <DataGridTextColumn Header="Hourly Rate" Binding="{Binding Path=HourlyRate}"/>
                     <DataGridTextColumn Header="SmallMatRate" Binding="{Binding Path=SmallMatRate}"/>
                     <DataGridTextColumn Header="BigMatRate" Binding="{Binding Path=BigMatRate}"/>
                     <DataGridTextColumn Header="House Allowance" Binding="{Binding Path=HouseAllowanceRate}"/>
                     <DataGridTextColumn Header="Tp/Feeding Allowance" Binding="{Binding Path=TPFeedingAllowanceRate}"/>
 
 
-                    <DataGridTemplateColumn Header="Edit Action"/>
-                    <DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Edit Action">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Click="btnEditMatrix">
@@ -112,8 +112,7 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Delete Action"/>
-                    <DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Delete Action">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Click="btnDeleteMatrix">

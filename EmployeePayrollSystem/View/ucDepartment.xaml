@@ -78,8 +78,7 @@
                     <DataGridTextColumn Header="Department Code" Binding="{Binding Path=Code}"/>
                     <DataGridTextColumn Header="Department Category" Binding="{Binding Path=Category}"/>
                     <DataGridTextColumn Header="Department Description" Binding="{Binding Path=Description}"/>
-                    <DataGridTemplateColumn Header="Edit Action"/>
-                    <DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Edit Action">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                  <Button Click="btnEditDept">
@@ -88,8 +87,7 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-                    <DataGridTemplateColumn Header="Delete Action"/>
-                    <DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Delete Action">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Click="btnDeleteDept">

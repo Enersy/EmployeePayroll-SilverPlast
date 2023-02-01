@@ -43,10 +43,13 @@ namespace EmployeePayrollSystem.ViewModels
         private AttendanceService _service;
         private EmployeeService _empservice;
 
+        private IEnumerable<Employee> employees;
+
 
         public EmployeeAttendanceViewModel()
         {
             _service = new AttendanceService();
+            _empservice = new EmployeeService();
             attendanceList = new ObservableCollection<Attendance>( );
             LoadData();
         }
@@ -63,6 +66,10 @@ namespace EmployeePayrollSystem.ViewModels
                 DisplayData();
 
             }
+
+            var empdata = await _empservice.GetEmployees();
+            if (empdata != null)
+                employees = empdata;
            
         }
 
@@ -77,15 +84,19 @@ namespace EmployeePayrollSystem.ViewModels
         private async void SaveRegister()
         {
             Attendance Attendance = new Attendance();
-            Attendance.InTime = TimeIn;
-            Attendance.OutTime = TimeOut;
-            Attendance.TotalTime = 0.0;
-            Attendance.TotalHrs = TotalHours;
-            Attendance.DateCreated = todaysDate;
-            Attendance.EmpName = EmployeeName;
-            Attendance.EmpCode = EmployeeCode;
-            Attendance.Shift = Shift;
-
+            var emp = employees.Where(x=>x.empCode.Equals(EmployeeCode)).FirstOrDefault();
+            if (emp != null)
+            {
+                
+                Attendance.InTime = TimeIn;
+                Attendance.OutTime = TimeOut;
+                Attendance.TotalTime = 0.0;
+                Attendance.TotalHrs = TotalHours;
+                Attendance.DateCreated = todaysDate;
+                Attendance.EmpName = String.Concat(emp.empFirstName + " " + emp.empLastName);
+                Attendance.EmpCode = emp.empCode;
+                Attendance.Shift = Shift;
+            }
             try
             {
                 if (Attendance.Id == 0)

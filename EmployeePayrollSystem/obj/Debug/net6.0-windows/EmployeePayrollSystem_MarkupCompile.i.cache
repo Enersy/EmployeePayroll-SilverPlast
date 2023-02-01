@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\Admin\source\repos\EmployeePayrollSystem\EmployeePayrollSystem\App.xaml
-9346468774
+12-442655932
 
-36804249094
+57-1047802622
 2562031884998
-Styles\Common.xaml;View\MainWindow.xaml;View\ucCategory.xaml;View\ucDepartment.xaml;View\ucEmployee.xaml;View\ucEmployeeAttendance.xaml;View\ucEmployeeManager.xaml;View\ucRegisterEmployee.xaml;View\ucSalaryMatrix.xaml;
+Styles\Common.xaml;View\MainWindow.xaml;View\ucCategory.xaml;View\ucDepartment.xaml;View\ucEmployee.xaml;View\ucEmployeeAttendance.xaml;View\ucEmployeeManager.xaml;View\ucPieceRateSalary.xaml;View\ucRegisterEmployee.xaml;View\ucSalary.xaml;View\ucSalaryMatrix.xaml;View\ucWagerSalary.xaml;
 
 False
 
