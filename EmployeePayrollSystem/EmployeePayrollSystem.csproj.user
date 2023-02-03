@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\ucCashAdvanceManager.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ucCashAdvanceRegistration.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\ucCategory.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -20,6 +26,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\ucEmployeeManager.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ucLoanManager.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ucLoanRegistration.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\ucPieceRateSalary.xaml.cs">
@@ -45,6 +57,12 @@
     <Page Update="View\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\ucCashAdvanceManager.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ucCashAdvanceRegistration.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\ucCategory.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -58,6 +76,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\ucEmployeeManager.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ucLoanManager.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ucLoanRegistration.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\ucPieceRateSalary.xaml">

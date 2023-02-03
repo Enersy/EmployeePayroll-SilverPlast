@@ -23,7 +23,7 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1">
-            <TextBlock FontSize="24">Department Registration</TextBlock>
+            <TextBlock FontSize="24">Title Registration</TextBlock>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1">
@@ -31,13 +31,13 @@
                 <WrapPanel >
                     
                     <TextBlock Width="700" HorizontalAlignment="Center">
-                        <Label>Department Name:</Label>
+                        <Label>Title Name:</Label>
                     <TextBox  Text="{Binding Name, Mode=TwoWay}" Width="150" />
-                    <Label>Department Code:</Label>
+                    <Label>Title Code:</Label>
                     <TextBox  Text="{Binding Code, Mode=TwoWay}"  Width="150"/>
                     </TextBlock>
                     <TextBlock Width="700">
-                         <Label> Department Category:
+                         <Label> Tile Category:
                     </Label>
                     <ComboBox x:Name="cboCategory" Width="150" Text="{Binding Category, Mode=TwoWay}" Initialized="cboCategory_Initialized">
 
@@ -73,11 +73,11 @@
                        AutoGenerateColumns="False">
 
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Department Id" Binding="{Binding Path=Id}"/>
-                    <DataGridTextColumn Header="Department Name" Binding="{Binding Path=Name}"/>
-                    <DataGridTextColumn Header="Department Code" Binding="{Binding Path=Code}"/>
-                    <DataGridTextColumn Header="Department Category" Binding="{Binding Path=Category}"/>
-                    <DataGridTextColumn Header="Department Description" Binding="{Binding Path=Description}"/>
+                    <DataGridTextColumn Header="Title Id" Binding="{Binding Path=Id}"/>
+                    <DataGridTextColumn Header="Tile Name" Binding="{Binding Path=Name}"/>
+                    <DataGridTextColumn Header="Title Code" Binding="{Binding Path=Code}"/>
+                    <DataGridTextColumn Header="Title Category" Binding="{Binding Path=Category}"/>
+                    <DataGridTextColumn Header="Description" Binding="{Binding Path=Description}"/>
                     <DataGridTemplateColumn Header="Edit Action">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>

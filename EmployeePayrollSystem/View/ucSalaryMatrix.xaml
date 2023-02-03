@@ -32,7 +32,7 @@
                     <TextBlock Height="40" Width="700">
                          <Label> Category:
                     </Label>
-                    <ComboBox x:Name="cboCategory" Width="150" Text="{Binding Category}"  Initialized="cboCategory_Initialized" >
+                    <ComboBox x:Name="cboCategory" Width="150" Text="{Binding Category}" DropDownClosed="cboCategory_DropDownClosed"  Initialized="cboCategory_Initialized" >
 
                     </ComboBox>
 

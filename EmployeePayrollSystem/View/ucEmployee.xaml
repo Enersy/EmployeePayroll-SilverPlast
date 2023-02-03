@@ -4,9 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:EmployeePayrollSystem.View"
-             xmlns:viewmodels="clr-namespace:EmployeePayrollSystem.ViewModels"
+               xmlns:viewmodels="clr-namespace:EmployeePayrollSystem.ViewModels"
              d:DataContext="{d:DesignInstance Type=viewmodels:EmployeeViewModel}"
-             mc:Ignorable="d" d:DesignWidth="800" Height="260">
+             mc:Ignorable="d" 
+             d:DesignWidth="800" Height="260">
     <Grid Background="Azure" VerticalAlignment="Top" >
         <Grid.RowDefinitions >
 
@@ -29,7 +30,7 @@
                     <TextBox x:Name="txtEmpCode"  Text="{Binding EmpCode,Mode=TwoWay}"  Width="130"></TextBox>
                          <Label> Category:
                     </Label>
-                    <ComboBox x:Name="cboCategory" Width="150" Text="{Binding EmpCategory ,Mode=TwoWay}" Initialized="cboCategory_Initialized"  >
+                    <ComboBox x:Name="cboCategory" Width="150" Text="{Binding EmpCategory ,Mode=TwoWay}" Initialized="cboCategory_Initialized" TouchEnter="cboCategory_TouchEnter" DropDownClosed="cboCategory_DropDownClosed"  >
 
                     </ComboBox>
 

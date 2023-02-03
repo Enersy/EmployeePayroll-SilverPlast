@@ -71,5 +71,15 @@ namespace EmployeePayrollSystem.View
         {
             Dashboard.Content = new ucSalary();
         }
+
+        private void btnLoanClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnLoan_Click(object sender, RoutedEventArgs e)
+        {
+            Dashboard.Content = new ucLoanRegistration();
+        }
     }
 }

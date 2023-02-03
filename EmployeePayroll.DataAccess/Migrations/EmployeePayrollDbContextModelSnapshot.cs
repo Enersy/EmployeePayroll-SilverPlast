@@ -30,6 +30,10 @@ namespace EmployeePayroll.DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
+                    b.Property<string>("EmpName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -499,9 +503,6 @@ namespace EmployeePayroll.DataAccess.Migrations
                     b.Property<DateTime>("DateTaken")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DueDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("EmpId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -509,6 +510,9 @@ namespace EmployeePayroll.DataAccess.Migrations
                     b.Property<string>("EmpName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Installments")
+                        .HasColumnType("int");
 
                     b.Property<double>("LoanAmount")
                         .HasColumnType("float");

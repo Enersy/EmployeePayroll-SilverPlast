@@ -12,7 +12,7 @@ namespace EmployeePayroll.Domain.Entities
         public string EmpId { get; set; }
         public string  EmpName { get; set; }
         public DateTime DateTaken { get; set; }
-        public DateTime DueDate { get; set; }
+        public int Installments { get; set; }
         public double LoanAmount { get; set; }
         public double RepaymentAmount { get; set; }
         public double LoanBalance { get; set; }

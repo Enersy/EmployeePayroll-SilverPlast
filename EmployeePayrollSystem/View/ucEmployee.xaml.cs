@@ -91,14 +91,16 @@ namespace EmployeePayrollSystem.View
             }
 
         }
-        async void fillDeptComboBox()
+        async Task fillDeptComboBox()
         {
             try
             {
-                var combodata = await _serviceDept.GetDepts();
-                if (combodata != null)
+                var combodata = await  _serviceDept.GetDepts();
+                var data = combodata.Where(x => x.Category.Equals(cboCategory.Text));
+                if (data != null)
                 {
-                    foreach (var item in combodata)
+                    cboDepartment.Items.Clear();
+                    foreach (var item in data)
                     {
                         cboDepartment.Items.Add(item.Name);
                     }
@@ -113,6 +115,28 @@ namespace EmployeePayrollSystem.View
         }
 
         private void cboDepartment_Initialized(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cboCategory_TouchEnter(object sender, TouchEventArgs e)
+        {
+            //if (_viewModel.EmpList != null)
+            //{
+            //    var result = _viewModel.EmpList.FirstOrDefault(x => x.empCode.Equals(cboCategory.Text, StringComparison.OrdinalIgnoreCase));
+            //    if (result != null)
+            //    {
+            //        _viewModel.em = string.Concat(result.empFirstName + " " + result.empLastName);
+            //    }
+            //    else
+            //    {
+            //        _viewModel.EmpName = String.Empty;
+            //    }
+            //}
+
+        }
+
+        private void cboCategory_DropDownClosed(object sender, EventArgs e)
         {
             fillDeptComboBox();
         }

@@ -2,6 +2,8 @@
 using EmployeePayrollSystem.Services;
 using EmployeePayrollSystem.ViewModels;
 using System;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -64,22 +66,22 @@ namespace EmployeePayrollSystem.View
 
         private async void cboDepartment_Initialized(object sender, EventArgs e)
         {
-            try
-            {
-                var combodata = await departmentService.GetDepts();
-                if (combodata != null)
-                {
-                    foreach (var item in combodata)
-                    {
-                        cboDepartment.Items.Add(item.Name);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
+            //try
+            //{
+            //    var combodata = await departmentService.GetDepts();
+            //    if (combodata != null)
+            //    {
+            //        foreach (var item in combodata)
+            //        {
+            //            cboDepartment.Items.Add(item.Name);
+            //        }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
 
-                MessageBox.Show(ex.Source.ToString(), ex.Message);
-            }
+            //    MessageBox.Show(ex.Source.ToString(), ex.Message);
+            //}
         }
 
         private async void cboCategory_Initialized(object sender, EventArgs e)
@@ -100,6 +102,34 @@ namespace EmployeePayrollSystem.View
 
                 MessageBox.Show(ex.Source.ToString(), ex.Message);
             }
+        }
+
+        private void cboCategory_DropDownClosed(object sender, EventArgs e)
+        {
+            fillDeptComboBox();
+        }
+
+        async Task fillDeptComboBox()
+        {
+            try
+            {
+                var combodata = await departmentService.GetDepts();
+                var data = combodata.Where(x => x.Category.Equals(cboCategory.Text));
+                if (data != null)
+                {
+                    cboDepartment.Items.Clear();
+                    foreach (var item in data)
+                    {
+                        cboDepartment.Items.Add(item.Name);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

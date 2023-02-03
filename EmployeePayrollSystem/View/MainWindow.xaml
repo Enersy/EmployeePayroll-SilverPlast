@@ -51,20 +51,11 @@
                 </Expander>
                 <Expander Header="Loan Manager" FontSize="20">
                     <StackPanel>
-                        <Button FontSize="15" Content="Apply Loan" Margin="20,0,0,5" UseLayoutRounding="False" />
-                        <Button FontSize="15" Content="Manage Loan" Margin="20,0,0,5" UseLayoutRounding="False" />
-                        <Button FontSize="15" Content="Apply Cash Advance" Margin="20,0,0,5" UseLayoutRounding="False" />
-                        <Button FontSize="15" Content="Manage Cash Advance" Margin="20,0,0,5" UseLayoutRounding="False" />
-                    </StackPanel>
+                    <Button FontSize="15" Content="Apply Loan" Margin="20,0,0,5" UseLayoutRounding="False" Click="btnLoan_Click" />
+                    <Button FontSize="15" Content="Apply Cash Advance" Margin="20,0,0,5" UseLayoutRounding="False" />
+                </StackPanel>
                 </Expander>
-                <Expander Header="Admin Manager" FontSize="20">
-                    <StackPanel>
-                        <Button FontSize="15" Content="Register Admin" Margin="20,0,0,5" UseLayoutRounding="False"/>
-                        <Button FontSize="15" Content="Manage Admin" Margin="20,0,0,5" UseLayoutRounding="False"/>
-
-                    </StackPanel>
-                </Expander>
-                
+               
                 <Expander Header="Report Manager" FontSize="20">
                     <StackPanel>
                         <Button FontSize="15" Content="Loan Report" Margin="20,0,0,5" UseLayoutRounding="False" />
