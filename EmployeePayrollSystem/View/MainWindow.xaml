@@ -1,0 +1,87 @@
+﻿<Window x:Class="EmployeePayrollSystem.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmployeePayrollSystem.View"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1050" Width="2050">
+    <Grid ShowGridLines="True">
+
+        <Grid.RowDefinitions >
+            <RowDefinition Height="0.10*" />
+            <RowDefinition Height="0.88*" />
+            <RowDefinition Height="0.02*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.15*" />
+            <ColumnDefinition Width="0.85*"  />
+        </Grid.ColumnDefinitions>
+
+       
+
+            <StackPanel VerticalAlignment="Stretch" Grid.Row="0" Grid.Column="1"  Orientation="Horizontal"  Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" >
+            <TextBlock  >
+                    Silve Plast Payroll Management System thh
+            </TextBlock>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Stretch" Grid.Row="0" Grid.Column="0"  Orientation="Horizontal"  Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" >
+            <Image />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0"   Margin="5"  Orientation="Vertical"  Background="{DynamicResource {x:Static SystemColors.MenuBarBrushKey}}" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+               
+                <Expander Header="Employee Manager" FontSize="20">
+                <StackPanel>
+                    <Button FontSize="15" Content="Employee Registration" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickEmpRegistration"   />
+                    <Button FontSize="15" Content="Manage Employee" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickEmpManager"   />
+                </StackPanel>
+            </Expander>
+                <Expander Header="Attendance Manager" FontSize="20">
+                    <StackPanel>
+                         <Button FontSize="15" Content="Daily Attendance" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickEmpAttendance" BorderThickness="0,0,0,0"   />
+                    </StackPanel>
+                </Expander>
+                <Expander Header="Salary Manager" FontSize="20">
+                    <StackPanel>
+                        <Button FontSize="15" Content="Salary Earner" Margin="20,0,0,5" UseLayoutRounding="False" Click="btnSalaryManager"  />
+                        <Button FontSize="15" Content="Wage Earner" Margin="20,0,0,5" UseLayoutRounding="False" />
+                        <Button FontSize="15" Content="Piece Rate" Margin="20,0,0,5" UseLayoutRounding="False"  />
+                   
+                </StackPanel>
+                </Expander>
+                <Expander Header="Loan Manager" FontSize="20">
+                    <StackPanel>
+                    <Button FontSize="15" Content="Apply Loan" Margin="20,0,0,5" UseLayoutRounding="False" Click="btnLoan_Click" />
+                    <Button FontSize="15" Content="Apply Cash Advance" Margin="20,0,0,5" UseLayoutRounding="False" />
+                </StackPanel>
+                </Expander>
+               
+                <Expander Header="Report Manager" FontSize="20">
+                    <StackPanel>
+                        <Button FontSize="15" Content="Loan Report" Margin="20,0,0,5" UseLayoutRounding="False" />
+                        <Button FontSize="15" Content="Attendance Report" Margin="20,0,0,5" UseLayoutRounding="False" />
+                        <Button FontSize="15" Content="Monthly Report" Margin="20,0,0,5" UseLayoutRounding="False" />
+                        <Button FontSize="15" Content="Annual Report" Margin="20,0,0,5" UseLayoutRounding="False" />
+                    </StackPanel>
+                </Expander>
+                <Expander Header="Application Settings" FontSize="20">
+                    <StackPanel>
+                    <Button FontSize="15" Content="Department Settings" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickDepartment"   />
+                        <Button FontSize="15" Content="Category Settings" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickCategory"   />
+                        
+                         <Button FontSize="15" Content="Salary Matrix Settings" Margin="20,0,0,5" UseLayoutRounding="False" Click="BtnClickMatrix"   />
+                    </StackPanel>
+                </Expander>
+            </StackPanel>
+
+        <ContentControl Grid.Row="1" Grid.Column="1" x:Name="Dashboard"   VerticalContentAlignment="Stretch" />
+            
+                    
+        
+
+
+
+
+
+    </Grid>
+</Window>

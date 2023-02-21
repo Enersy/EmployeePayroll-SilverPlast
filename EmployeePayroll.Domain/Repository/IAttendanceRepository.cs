@@ -1,0 +1,17 @@
+﻿using EmployeePayroll.Domain.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EmployeePayroll.Domain.Repository
+{
+    public interface IAttendanceRepository:IGenericRepository<Attendance>
+    {
+        Task<IEnumerable<Attendance>> GetAllAttendance();
+        Task UpdateAttendance(Attendance attendance);
+        Task DeleteAttendance(int Id);
+        Task AddAttendance(Attendance attendances);
+    }
+}

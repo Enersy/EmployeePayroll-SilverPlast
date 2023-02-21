@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\ucCashAdvanceManager.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ucCashAdvanceRegistration.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ucCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ucDepartment.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ucEmployee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ucEmployeeAttendance.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ucEmployeeManager.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ucLoanManager.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ucLoanRegistration.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ucPieceRateSalary.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ucRegisterEmployee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ucSalary.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ucSalaryMatrix.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\ucWagerSalary.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Styles\Common.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ucCashAdvanceManager.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ucCashAdvanceRegistration.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ucCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ucDepartment.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ucEmployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ucEmployeeAttendance.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ucEmployeeManager.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ucLoanManager.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ucLoanRegistration.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ucPieceRateSalary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ucRegisterEmployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ucSalary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ucSalaryMatrix.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\ucWagerSalary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
